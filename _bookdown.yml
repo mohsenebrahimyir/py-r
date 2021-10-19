@@ -1,0 +1,23 @@
+book_filename: "py-r"
+delete_merged_file: false
+output_dir: "py-r"
+rmd_subdir: "Rmd"
+language:
+  label:
+    and: "و"
+    toc: "فهرست"
+    fig: "شکل "
+    tab: "جدول "
+    def: "تعریف "
+    exr: "تمرین "
+    exm: "مثال "
+    solution: "راه حل "
+    remark: "نکته "
+    eq: 'معادله '
+    thm: 'قضیه '
+    lem: 'اصل '
+    hyp: 'فرضیه '
+    cor: "نتیجه گیری"
+    proof: 'اثبات '
+  ui:
+    chapter_name: "فصل "

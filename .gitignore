@@ -1,0 +1,17 @@
+## R project
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+## Large files and directory
+lua/
+timevis/
+data/
+
+## Import ant Export files
+img/
+data/
+py-r/
+py-r.Rmd
+py-r.log

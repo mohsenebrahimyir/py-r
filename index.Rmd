@@ -1,0 +1,77 @@
+--- 
+title: "پایتون و آر" 
+subtitle: "مفاهیم پایه برای برنامه نویسی با زبان‌های Python و R"
+author:
+  - name: "محبوبه کاتبی"
+    url: https://www.briangym.ir/about-us
+    affiliation: "باشگاه مغز"
+    affiliation_url: https://www.briangym.ir
+  - name: "محسن ابراهیمی"
+    url: http://www.mohsenebrahimy.ir/
+    affiliation: "باشگاه مغز"
+    affiliation_url: https://www.briangym.ir
+date: 
+  - مهر ۱۴۰۰
+documentclass: book
+favicon: 
+  - "./img/favicon.ico"
+cover-image: 
+  - "./img/cover.jpg"
+site: bookdown::bookdown_site
+url: https://mohsenebrahimy.ir/book/py-r/
+classoption: openany
+bibliography: 
+  - bib/book.bib
+  - bib/packages.bib
+link-citations: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = FALSE,
+	fig.pos = "!ht",
+	fig.align = "center",
+	message = FALSE,
+	warning = FALSE,
+	out.width = "70%"
+)
+```
+
+```{r include=FALSE}
+## import source
+source("R/library.R")
+source("R/function.R")
+
+## create necessary directory
+dir.create("img")
+dir.create("data")
+```
+
+پیش گفتار {-}
+================================================================================
+
+به همراه این کتاب می‌توانید یادگیری فیزیک را شروع کنید.
+سعی کنید بعد از هر آموزش تمرینات مربوط به آن را انجام دهید.
+نظرات و پیشنهادات خود را می‌توانید از طریق ایمیل
+mhb.s.katebi@gmail.com
+و
+mohsenebrahimy.ir@gmail.com
+برای بهبود کتاب به نویسنده ارسال کنید
+تا در هر بروزرسانی اصلاحات صورت گیرد. این نسخه در تاریخ
+**[`r date_gr_to_jl()`]{dir=ltr}**
+بروزرسانی شده است.
+
+::: {align="center"} :::
+[<https://mohsenebrahimy.ir/book/py-r/>]{dir=ltr}
+::::::
+
+امیدوارم این کتاب برایتان مفید باشد.
+
+::: {align="center"} :::
+**محسن ابراهیمی**
+
+**www.mohsenebrahimy.ir**
+::::::
+
+
+
