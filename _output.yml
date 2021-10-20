@@ -57,3 +57,4 @@ bookdown::pdf_book:
     - '--lua-filter=lua/author-info-blocks.lua'
     - '--lua-filter=lua/diagram-generator.lua'
     - '--lua-filter=lua/cito.lua'
+
