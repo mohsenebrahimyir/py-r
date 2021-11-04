@@ -13,5 +13,7 @@ data/
 img/
 data/
 py-r/
+_bookdown_files/
 py-r.Rmd
 py-r.log
+
