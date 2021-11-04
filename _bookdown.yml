@@ -4,7 +4,6 @@ output_dir: "py-r"
 rmd_subdir: "Rmd"
 language:
   label:
-    and: "و"
     toc: "فهرست"
     fig: "شکل "
     tab: "جدول "
