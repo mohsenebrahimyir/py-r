@@ -1,4 +1,3 @@
-‌
 # بخش اول: چرایی یادگیری پایتون
 
 
@@ -42,7 +41,7 @@ Psychopy
 
 
 ```{r}
-knitr::include_graphics("./img/Fig_01_01_01_01.png")
+#knitr::include_graphics("./img/Fig_01_01_01_01.png")
 ```
 
 
@@ -72,7 +71,7 @@ Main Memory:
 اصلی کمتر است.
 
 - دستگاه‌های ورودی و خروجی یا
-(Input and Output Devices):
+[(Input and Output Devices)]{dir=ltr}:
 همان وسایلی هستند که به کمک آن‌ها با کامپیوتر ارتباط برقرار می‌کنیم، شامل
 صفحه کلید، مانیتور، ماوس و ...
 
@@ -87,7 +86,9 @@ CPU
 دو نکته را در نظر داشته باشیم:
 
 - اول اینکه باید با زبان برنامه‌نویسی موردنظر خود آشنا شویم
-یعنی لغات رزرو شده  (Reserved Words) و گرامر زبان برنامه‌نویسی
+یعنی لغات رزرو شده
+[(Reserved Words)]{dir=ltr}
+و گرامر زبان برنامه‌نویسی
 
 خوب است بدانیم برای هر زبان برنامه‌نویسی، لغاتی هستند که مفهوم خاصی داشته و 
 کاربر برنامه‌نویس نمی‌تواند از آن‌ها برای منظور و کاربرد دیگری استفاده نماید.
@@ -100,20 +101,21 @@ CPU
 
 ```{r echo=FALSE}
 tibble(
-        c("and", "as", "assert", "break", "class", "continue"),
-        c("def", "from", "nonlocal", "while", "del", "elif"),
-        c("else", "except", "finally", "for", "global", "if"),
-        c("import", "in", "is", "lambda", "not", "or"),
-        c("or", "pass", "raise", "return", "try", "with", "yield")
-) %>% 
+  "a" = c("and", "as", "assert", "break", "class", "continue"),
+  "b" = c("def", "from", "nonlocal", "while", "del", "elif"),
+  "c" = c("else", "except", "finally", "for", "global", "if"),
+  "d" = c("import", "in", "is", "lambda", "not", "or"),
+  "e" = c("pass", "raise", "return", "try", "with", "yield")
+) %>%
   kable(
     booktabs = TRUE,
-    align=c('c', 'c', 'c', 'c', 'c'),
+    align = c("c", "c", "c", "c", "c"),
     caption = "برخی از کلمات رزرو شده در پایتون"
   ) %>%
   my_table_style()
 
 ```
+
 
 ```
 rw = list ("and", "as", "assert", "break", "class", "continue", "def", "from", "nonlocal", "while", "del", "elif", "else", "except", "finally", "for", "global", "if", "import", "in", "is", "lambda", "not", "or", "pass", "raise", "return", "try", "with", "yield")
@@ -125,8 +127,8 @@ knitr::kable(head(rw), booktabs = TRUE)
 
 |   |   |   |   |   |
 | - | - | - | - | - |
-| and | del | global | not | with |
-| as | elif | if | or | yield |
+| `and` | `del` | `global` | `not` | `with` |
+| as | elif | if | or | `yield` |
 | assert | else | import | pass |
 | break | except | in | raise |
 | class | finally | is | return |
