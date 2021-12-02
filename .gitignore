@@ -5,7 +5,6 @@
 .Ruserdata
 
 ## Large files and directory
-lua/
 timevis/
 data/
 
@@ -16,4 +15,4 @@ py-r/
 _bookdown_files/
 py-r.Rmd
 py-r.log
-
+py-r.tex
