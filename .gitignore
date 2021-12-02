@@ -13,6 +13,9 @@ img/
 data/
 py-r/
 _bookdown_files/
+py-r_files
+nul
+py-r.knit.md
 py-r.Rmd
 py-r.log
 py-r.tex
