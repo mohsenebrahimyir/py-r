@@ -28,9 +28,9 @@ link-citations: yes
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
-	echo = FALSE,
-	fig.pos = "!ht",
+	echo = TRUE,
 	fig.align = "center",
+	fig.pos = "!ht",
 	message = FALSE,
 	warning = FALSE,
 	out.width = "70%"
@@ -72,6 +72,4 @@ mohsenebrahimy.ir@gmail.com
 
 **www.mohsenebrahimy.ir**
 ::::::
-
-
 
