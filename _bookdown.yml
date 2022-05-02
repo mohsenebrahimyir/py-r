@@ -1,6 +1,6 @@
 book_filename: "py-r"
-delete_merged_file: false
-output_dir: "py-r"
+delete_merged_file: true
+output_dir: "docs"
 rmd_subdir: "Rmd"
 language:
   label:

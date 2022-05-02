@@ -26,35 +26,17 @@ bookdown::gitbook:
          <a href="https://web.whatsapp.com/send?phone=989118645816" class="fa fa-whatsapp fa-3x" style="color:green"></a>
         </p>
         &nbsp;
-    download: ["pdf"]
+    download: false
     sharing: 
       facebook: false
       github: false
-      twitter: false
-      linkedin: false
+      twitter: true
+      linkedin: true
       weibo: false
       instapaper: false
       vk: false
-      whatsapp: false
+      whatsapp: true
       all: null
     info: false
   includes:
     in_header: ./stl/header.html
-  pandoc_args:
-    - '--lua-filter=lua/scholarly-metadata.lua'
-    - '--lua-filter=lua/author-info-blocks.lua'
-    - '--lua-filter=lua/diagram-generator.lua'
-    - '--lua-filter=lua/short-captions.lua'
-    - '--lua-filter=lua/cito.lua'
-bookdown::pdf_book:
-  includes:
-    in_header: ./stl/preamble.tex
-  latex_engine: xelatex
-  citation_package: natbib
-  keep_tex: yes
-  pandoc_args:
-    - '--lua-filter=lua/scholarly-metadata.lua'
-    - '--lua-filter=lua/author-info-blocks.lua'
-    - '--lua-filter=lua/diagram-generator.lua'
-    - '--lua-filter=lua/cito.lua'
-
