@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>فصل 5 تکرار | پایتون و آر</title>
-  <meta name="description" content="فصل 5 تکرار | پایتون و آر" />
+  <title>1.2 درک برنامه‌نویسی | پایتون و آر</title>
+  <meta name="description" content="1.2 درک برنامه‌نویسی | پایتون و آر" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta property="og:title" content="1.2 درک برنامه‌نویسی | پایتون و آر" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://mohsenebrahimyir.github.io/py-r/" />
   <meta property="og:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta name="twitter:title" content="1.2 درک برنامه‌نویسی | پایتون و آر" />
   
   
   <meta name="twitter:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="fruitful-functions-and-void-functions.html"/>
-<link rel="next" href="while-iteration.html"/>
+<link rel="prev" href="computer-hardware-architect.html"/>
+<link rel="next" href="interpreter-and-compiler.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -269,22 +269,88 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="iteration" class="section level1" number="5">
-<h1><span class="header-section-number">فصل 5</span> تکرار</h1>
-<p>برای جلوگیری از دویاره نویسی در برنامه‌ها از
-ساختار حلقه
-(<span dir="ltr">Loop</span>)
-یا تکرار
-(<span dir="ltr">Iteration</span>)
-می‌وان استفاده کرد.</p>
+<div id="understanding-programming" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> درک برنامه‌نویسی</h2>
+<p>برای اینکه بتوانیم مهارت خوبی در برنامه‌نویسی بدست آوریم،
+دو نکته را در نظر داشته باشیم:</p>
+<ul>
+<li>اول اینکه باید با زبان برنامه‌نویسی موردنظر خود آشنا شویم
+یعنی لغات رزرو شده
+<span dir="ltr">(Reserved Words)</span>
+و گرامر زبان برنامه‌نویسی</li>
+</ul>
+<p>خوب است بدانیم برای هر زبان برنامه‌نویسی، لغاتی هستند که مفهوم خاصی داشته و
+کاربر برنامه‌نویس نمی‌تواند از آن‌ها برای منظور و کاربرد دیگری استفاده نماید.
+درعین حال، هر برنامه‌نویسی می‌تواند لغات خاص منظوره خود را به مفسر زبان
+برنامه‌نویسی خود معرفی کند. یکی از روش‌های انجام این کار، تعریف متغیر
+<span dir="ltr">(Variable)</span>
+است.
+کلمات رزرو شده توسط پایتون، شامل موارد ذیل می‌شوند:</p>
+<div dir="ltr">
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><code>and</code></td>
+<td align="left"><code>as</code></td>
+<td align="left"><code>assert</code></td>
+<td align="left"><code>break</code></td>
+<td align="left"><code>class</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>continue</code></td>
+<td align="left"><code>def</code></td>
+<td align="left"><code>del</code></td>
+<td align="left"><code>elif</code></td>
+<td align="left"><code>else</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>except</code></td>
+<td align="left"><code>finally</code></td>
+<td align="left"><code>for</code></td>
+<td align="left"><code>from</code></td>
+<td align="left"><code>global</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>if</code></td>
+<td align="left"><code>in</code></td>
+<td align="left"><code>is</code></td>
+<td align="left"><code>import</code></td>
+<td align="left"><code>lambda</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>nonlocal</code></td>
+<td align="left"><code>not</code></td>
+<td align="left"><code>or</code></td>
+<td align="left"><code>pass</code></td>
+<td align="left"><code>raise</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>return</code></td>
+<td align="left"><code>try</code></td>
+<td align="left"><code>while</code></td>
+<td align="left"><code>with</code></td>
+<td align="left"><code>yield</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>دوم اینکه، بتوانیم یک داستان بگوئیم!</li>
+</ul>
+<p>در واقع هنر حل مسئله، اصلی‌ترین مهارت یک برنامه‌نویس محسوب می‌شود.
+با کسب این مهارت، می‌توانیم زبان‌های برنامه‌نویسی دوم به بعد را راحت‌تر بیاموزیم.</p>
+<p>پس برای شروع، ما شروع به خواندن و توضیح برنامه‌ها می‌کنیم،
+آنگاه برنامه‌های ساده‌ می نویسیم، و سپس برنامه‌های پیچیده‌تر را در طول زمان می‌نویسیم.
+اگر خوب پیش برویم، خواهیم توانست روش و یا الگوریتم حل مسئله را از دیدگاه خودمان بنویسیم
+و آنگاه به مرور، مهارت حل خلاقانه مسئله را بدست خواهیم آورد.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="fruitful-functions-and-void-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="while-iteration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="computer-hardware-architect.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="interpreter-and-compiler.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

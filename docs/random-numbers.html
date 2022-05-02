@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>فصل 5 تکرار | پایتون و آر</title>
-  <meta name="description" content="فصل 5 تکرار | پایتون و آر" />
+  <title>4.5 اعداد تصادفی | پایتون و آر</title>
+  <meta name="description" content="4.5 اعداد تصادفی | پایتون و آر" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta property="og:title" content="4.5 اعداد تصادفی | پایتون و آر" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://mohsenebrahimyir.github.io/py-r/" />
   <meta property="og:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta name="twitter:title" content="4.5 اعداد تصادفی | پایتون و آر" />
   
   
   <meta name="twitter:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="fruitful-functions-and-void-functions.html"/>
-<link rel="next" href="while-iteration.html"/>
+<link rel="prev" href="math-functions.html"/>
+<link rel="next" href="create-new-function.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -269,22 +269,58 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="iteration" class="section level1" number="5">
-<h1><span class="header-section-number">فصل 5</span> تکرار</h1>
-<p>برای جلوگیری از دویاره نویسی در برنامه‌ها از
-ساختار حلقه
-(<span dir="ltr">Loop</span>)
-یا تکرار
-(<span dir="ltr">Iteration</span>)
-می‌وان استفاده کرد.</p>
+<div id="random-numbers" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> اعداد تصادفی</h2>
+<p>به نظر می‌رسد که ساختن یک برنامه واقعاً غیر قطعی
+چندان آسان نیست، اما راه‌هایی وجود دارد که حداقل
+غیرقطعی به نظر برسد. یکی از آنها استفاده از
+الگوریتم‌هایی است که اعداد شبه تصادفی
+<span dir="ltr">(Random)</span>
+تولید می‌کنند.
+درست است که اعداد شبه تصادفی واقعاْ تصادفی نیستند
+اما بازهم تمایز آن‌ها از اعداد تصادفیُ غیرممکن است.</p>
+<p>ماژول
+<span dir="ltr"><code>random</code></span>
+توابعی را بدست می‌دهد که اعداد تصادفی تولید می‌کنند.</p>
+<p>یک مثال را باهم ببینیم:</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="random-numbers.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb35-2"><a href="random-numbers.html#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="random-numbers.html#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
+<span id="cb35-4"><a href="random-numbers.html#cb35-4" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> random.random()</span>
+<span id="cb35-5"><a href="random-numbers.html#cb35-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(x)</span></code></pre></div>
+<pre class="output"><code>0.0920530236235576
+0.6250171315179012
+0.7706549349232131
+0.7402147110407385
+0.15988207593735793
+0.4024047009691475
+0.8179640452074257
+0.44502244153994786
+0.8980030614870437
+0.9357510761663985</code></pre>
+<p>این برنامه یک لیستی از اعداد تصادفی بین
+<code>0</code>
+و
+<code>1</code>
+تولید می‌کند که شامل
+<code>1</code>
+نمی‌شوند:</p>
+<p>مثال‌هایی دیگر از توابع
+<span dir="ltr"><code>random‌</code></span>
+عبارتند از:</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="random-numbers.html#cb37-1" aria-hidden="true" tabindex="-1"></a>random.randint(<span class="dv">5</span>, <span class="dv">10</span>)</span></code></pre></div>
+<pre class="output"><code>7</code></pre>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="random-numbers.html#cb39-1" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb39-2"><a href="random-numbers.html#cb39-2" aria-hidden="true" tabindex="-1"></a>random.choice(t)</span></code></pre></div>
+<pre class="output"><code>3</code></pre>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="fruitful-functions-and-void-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="while-iteration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="math-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="create-new-function.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

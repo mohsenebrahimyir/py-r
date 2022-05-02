@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>فصل 5 تکرار | پایتون و آر</title>
-  <meta name="description" content="فصل 5 تکرار | پایتون و آر" />
+  <title>8.6 لیست‌ها و رشته‌ها | پایتون و آر</title>
+  <meta name="description" content="8.6 لیست‌ها و رشته‌ها | پایتون و آر" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta property="og:title" content="8.6 لیست‌ها و رشته‌ها | پایتون و آر" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://mohsenebrahimyir.github.io/py-r/" />
   <meta property="og:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta name="twitter:title" content="8.6 لیست‌ها و رشته‌ها | پایتون و آر" />
   
   
   <meta name="twitter:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="fruitful-functions-and-void-functions.html"/>
-<link rel="next" href="while-iteration.html"/>
+<link rel="prev" href="important-function-for-lists.html"/>
+<link rel="next" href="r-programming-language.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -269,22 +269,44 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="iteration" class="section level1" number="5">
-<h1><span class="header-section-number">فصل 5</span> تکرار</h1>
-<p>برای جلوگیری از دویاره نویسی در برنامه‌ها از
-ساختار حلقه
-(<span dir="ltr">Loop</span>)
-یا تکرار
-(<span dir="ltr">Iteration</span>)
-می‌وان استفاده کرد.</p>
+<div id="lists-strings" class="section level2" number="8.6">
+<h2><span class="header-section-number">8.6</span> لیست‌ها و رشته‌ها</h2>
+<p>یک رشته، دنباله‌ای از کاراکترهاست و یک لیست دنباله‌ای از عناصر.
+اما یک لیست از کاراکترها، همانند یک رشته نیست. برای تبدیل یک رشته به یک لیست،
+می‌توان از متد یا تابع
+<span dir="ltr"><code>list(string_name)</code></span>
+استفاده کرد:</p>
+<div class="sourceCode" id="cb146"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb146-1"><a href="lists-strings.html#cb146-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">&#39;spam&#39;</span></span>
+<span id="cb146-2"><a href="lists-strings.html#cb146-2" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> <span class="bu">list</span>(s)</span>
+<span id="cb146-3"><a href="lists-strings.html#cb146-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(t)</span></code></pre></div>
+<pre class="output"><code>[&#39;s&#39;, &#39;p&#39;, &#39;a&#39;, &#39;m&#39;]</code></pre>
+<p>اما اگر بخواهیم رشته‌ای از کلمات را به لیست تبدیل کنیم، چه باید کرد:</p>
+<div class="sourceCode" id="cb148"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb148-1"><a href="lists-strings.html#cb148-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">&#39;pining for the fjords&#39;</span></span>
+<span id="cb148-2"><a href="lists-strings.html#cb148-2" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> s.split()</span>
+<span id="cb148-3"><a href="lists-strings.html#cb148-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(t)</span></code></pre></div>
+<pre class="output"><code>[&#39;pining&#39;, &#39;for&#39;, &#39;the&#39;, &#39;fjords&#39;]</code></pre>
+<p>و یا مثالی دیگر که در آن با کاربرد توابع
+<span dir="ltr"><code>split(delimiter)</code></span> و
+<span dir="ltr"><code>join(list_name)</code></span>
+آشنا می‌شویم:</p>
+<div class="sourceCode" id="cb150"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb150-1"><a href="lists-strings.html#cb150-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">&#39;spam-spam-spam&#39;</span></span>
+<span id="cb150-2"><a href="lists-strings.html#cb150-2" aria-hidden="true" tabindex="-1"></a>delimiter <span class="op">=</span> <span class="st">&#39;-&#39;</span></span>
+<span id="cb150-3"><a href="lists-strings.html#cb150-3" aria-hidden="true" tabindex="-1"></a>s.split(delimiter)</span></code></pre></div>
+<pre class="output"><code>[&#39;spam&#39;, &#39;spam&#39;, &#39;spam&#39;]</code></pre>
+<div class="sourceCode" id="cb152"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb152-1"><a href="lists-strings.html#cb152-1" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> [<span class="st">&#39;pining&#39;</span>, <span class="st">&#39;for&#39;</span>, <span class="st">&#39;the&#39;</span>, <span class="st">&#39;fjords&#39;</span>]</span>
+<span id="cb152-2"><a href="lists-strings.html#cb152-2" aria-hidden="true" tabindex="-1"></a>delimiter <span class="op">=</span> <span class="st">&#39; &#39;</span></span>
+<span id="cb152-3"><a href="lists-strings.html#cb152-3" aria-hidden="true" tabindex="-1"></a>delimiter.join(t)</span></code></pre></div>
+<pre class="output"><code>&#39;pining for the fjords&#39;</code></pre>
+
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="fruitful-functions-and-void-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="while-iteration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="important-function-for-lists.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="r-programming-language.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

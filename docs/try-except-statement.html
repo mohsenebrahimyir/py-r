@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>فصل 5 تکرار | پایتون و آر</title>
-  <meta name="description" content="فصل 5 تکرار | پایتون و آر" />
+  <title>3.5 استفاده از try و except | پایتون و آر</title>
+  <meta name="description" content="3.5 استفاده از try و except | پایتون و آر" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta property="og:title" content="3.5 استفاده از try و except | پایتون و آر" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://mohsenebrahimyir.github.io/py-r/" />
   <meta property="og:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta name="twitter:title" content="3.5 استفاده از try و except | پایتون و آر" />
   
   
   <meta name="twitter:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="fruitful-functions-and-void-functions.html"/>
-<link rel="next" href="while-iteration.html"/>
+<link rel="prev" href="nested-conditionals.html"/>
+<link rel="next" href="functions.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -269,22 +269,47 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="iteration" class="section level1" number="5">
-<h1><span class="header-section-number">فصل 5</span> تکرار</h1>
-<p>برای جلوگیری از دویاره نویسی در برنامه‌ها از
-ساختار حلقه
-(<span dir="ltr">Loop</span>)
-یا تکرار
-(<span dir="ltr">Iteration</span>)
-می‌وان استفاده کرد.</p>
+<div id="try-except-statement" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> استفاده از <code>try</code> و <code>except</code></h2>
+<p>برخی اوقات در جریان برنامه‌نویسی شرطی، نیاز داریم که به مفسر پایتون بگوئیم
+براساس ورودی‌های مختلف چگونه رفتار کند تا کد برنامه ما با خطا رویرو نشود.
+مثلاً در برنامه از کاربر خواستیم مقداری عددی وارد کند و بر اساس این مقدار،
+قرار است محاسبه‌ای انجام گیرد.
+حال فرض کنید کاربر مقداری غیر عددی وارد کرد و آنگاه این مقدار غیرعددی در یک
+فرمول محاسباتی وارد می‌شود! چه اتفاقی می‌افتد؟
+مفسر پایتون اجرای برنامه را قطع می‌کند، چرا که نتوانسته است مقدار غیرعددی را
+در محاسبات وارد کند.</p>
+<p>در این مواقع استفاده از ساختار
+<code>try-except</code>
+می‌تواند کمک‌کننده باشد:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="try-except-statement.html#cb18-1" aria-hidden="true" tabindex="-1"></a>inp <span class="op">=</span> <span class="bu">input</span>(<span class="st">&#39;Enter Fahrenheit Temperature:&#39;</span>)</span>
+<span id="cb18-2"><a href="try-except-statement.html#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb18-3"><a href="try-except-statement.html#cb18-3" aria-hidden="true" tabindex="-1"></a>    fahr <span class="op">=</span> <span class="bu">float</span>(inp)</span>
+<span id="cb18-4"><a href="try-except-statement.html#cb18-4" aria-hidden="true" tabindex="-1"></a>    cel <span class="op">=</span> (fahr <span class="op">-</span> <span class="fl">32.0</span>) <span class="op">*</span> <span class="fl">5.0</span> <span class="op">/</span> <span class="fl">9.0</span></span>
+<span id="cb18-5"><a href="try-except-statement.html#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(cel)</span>
+<span id="cb18-6"><a href="try-except-statement.html#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span>:</span>
+<span id="cb18-7"><a href="try-except-statement.html#cb18-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;Please enter a number&#39;</span>)</span></code></pre></div>
+<p>در اینجا پایتون کار را با اجرای دستور
+<code>try</code>
+آغاز می‌کند و اگر همه چیز خوب باشد، بلاک
+<code>except</code>
+را درنظر نمی‌گیرد. اما اگر استثنایی در بلاک
+<code>try</code>
+رخ داد، مفسر پایتون از بلاک
+<code>try</code>
+عبور می‌کند و به اجرای بلاک
+<code>except</code>
+می‌پردازد.</p>
+
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="fruitful-functions-and-void-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="while-iteration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="nested-conditionals.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

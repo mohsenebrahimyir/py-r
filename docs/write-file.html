@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>فصل 5 تکرار | پایتون و آر</title>
-  <meta name="description" content="فصل 5 تکرار | پایتون و آر" />
+  <title>7.6 نوشتن در فایل | پایتون و آر</title>
+  <meta name="description" content="7.6 نوشتن در فایل | پایتون و آر" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta property="og:title" content="7.6 نوشتن در فایل | پایتون و آر" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://mohsenebrahimyir.github.io/py-r/" />
   <meta property="og:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta name="twitter:title" content="7.6 نوشتن در فایل | پایتون و آر" />
   
   
   <meta name="twitter:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="fruitful-functions-and-void-functions.html"/>
-<link rel="next" href="while-iteration.html"/>
+<link rel="prev" href="try-except-open-file.html"/>
+<link rel="next" href="lists.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -269,22 +269,38 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="iteration" class="section level1" number="5">
-<h1><span class="header-section-number">فصل 5</span> تکرار</h1>
-<p>برای جلوگیری از دویاره نویسی در برنامه‌ها از
-ساختار حلقه
-(<span dir="ltr">Loop</span>)
-یا تکرار
-(<span dir="ltr">Iteration</span>)
-می‌وان استفاده کرد.</p>
+<div id="write-file" class="section level2" number="7.6">
+<h2><span class="header-section-number">7.6</span> نوشتن در فایل</h2>
+<p>بیشتر اوقات افراد نیاز دارند که در فایل داده خود، ویرایش انجام داده یا
+داده جدیدی به آن بیافزایند. بنابراین باید قادر باشند که با استفاده از دستورات
+لازم، این کار را انجام دهند. اما یک نکته متفاوت اینجا مطرح می‌شود،
+به این قطعه کد توجه کنید:</p>
+<div class="sourceCode" id="cb92"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb92-1"><a href="write-file.html#cb92-1" aria-hidden="true" tabindex="-1"></a>fout <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;output.txt&#39;</span>, <span class="st">&#39;w&#39;</span>)</span>
+<span id="cb92-2"><a href="write-file.html#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(fout)</span></code></pre></div>
+<pre class="output"><code>&lt;_io.TextIOWrapper name=&#39;output.txt&#39; mode=&#39;w&#39; encoding=&#39;UTF-8&#39;&gt;</code></pre>
+<p>در اینجا چنانچه فایل موردنظر وجود داشته باشد، فایل باز شده و آماده نوشتن می‌باشد:
+در واقع پارمتر
+<span dir="ltr">‘w’</span>
+این اجازه را صادر می‌کند. اما اگر فایل موجود نباشد، یک فایل جدید با نام ذکر شده،
+ایجاد می‌شود و آماده نوشتن خواهد بود.</p>
+<p>مثلاً فرض کنیم می‌خواهیم متن زیر را در فایل بنویسیم:</p>
+<pre><code>This here&#39;s the wattle</code></pre>
+<p>کد لازم برای این کار، به شکل زیر خواهد بود:</p>
+<div class="sourceCode" id="cb95"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb95-1"><a href="write-file.html#cb95-1" aria-hidden="true" tabindex="-1"></a>line1 <span class="op">=</span> <span class="st">&quot;This here&#39;s the wattle,</span><span class="ch">\n</span><span class="st">&quot;</span></span>
+<span id="cb95-2"><a href="write-file.html#cb95-2" aria-hidden="true" tabindex="-1"></a>fout.write(line1)</span></code></pre></div>
+<pre class="output"><code>24</code></pre>
+<p>و درنهایت اینکه وقتی کارمان با فایلی تمام شد، می‌بایست حتماً آن را ببندیم:</p>
+<div class="sourceCode" id="cb97"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb97-1"><a href="write-file.html#cb97-1" aria-hidden="true" tabindex="-1"></a>fout.close()</span></code></pre></div>
+
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="fruitful-functions-and-void-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="while-iteration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="try-except-open-file.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lists.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

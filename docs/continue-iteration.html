@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>فصل 5 تکرار | پایتون و آر</title>
-  <meta name="description" content="فصل 5 تکرار | پایتون و آر" />
+  <title>5.3 اتمام تکرار فعلی و ادامه تکرار بعدی | پایتون و آر</title>
+  <meta name="description" content="5.3 اتمام تکرار فعلی و ادامه تکرار بعدی | پایتون و آر" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta property="og:title" content="5.3 اتمام تکرار فعلی و ادامه تکرار بعدی | پایتون و آر" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://mohsenebrahimyir.github.io/py-r/" />
   <meta property="og:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta name="twitter:title" content="5.3 اتمام تکرار فعلی و ادامه تکرار بعدی | پایتون و آر" />
   
   
   <meta name="twitter:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="fruitful-functions-and-void-functions.html"/>
-<link rel="next" href="while-iteration.html"/>
+<link rel="prev" href="infinite-loops.html"/>
+<link rel="next" href="for-iteration.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -269,22 +269,28 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="iteration" class="section level1" number="5">
-<h1><span class="header-section-number">فصل 5</span> تکرار</h1>
-<p>برای جلوگیری از دویاره نویسی در برنامه‌ها از
-ساختار حلقه
-(<span dir="ltr">Loop</span>)
-یا تکرار
-(<span dir="ltr">Iteration</span>)
-می‌وان استفاده کرد.</p>
+<div id="continue-iteration" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> اتمام تکرار فعلی و ادامه تکرار بعدی</h2>
+<p>گاهی اوقات ما در یک تکرار یک حلقه هستیم و می‌خواهیم تکرار فعلی را تمام کنیم و
+بلافاصله به تکرار بعدی برویم. در آن صورت می‌توانیم از دستور
+<span dir="ltr"><code>continue</code></span>
+برای پرش به تکرار بعدی استفاده کنیم، بدون اینکه بدنه حلقه برای تکرار فعلی تمام شود.</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="continue-iteration.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="va">True</span>:</span>
+<span id="cb51-2"><a href="continue-iteration.html#cb51-2" aria-hidden="true" tabindex="-1"></a>    line <span class="op">=</span> <span class="bu">input</span>(<span class="st">&#39;&gt; &#39;</span>)</span>
+<span id="cb51-3"><a href="continue-iteration.html#cb51-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> line[<span class="dv">0</span>] <span class="op">==</span> <span class="st">&#39;#&#39;</span>:</span>
+<span id="cb51-4"><a href="continue-iteration.html#cb51-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span>
+<span id="cb51-5"><a href="continue-iteration.html#cb51-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> line <span class="op">==</span> <span class="st">&#39;done&#39;</span>:</span>
+<span id="cb51-6"><a href="continue-iteration.html#cb51-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span></span>
+<span id="cb51-7"><a href="continue-iteration.html#cb51-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line)</span>
+<span id="cb51-8"><a href="continue-iteration.html#cb51-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Done!&#39;</span>)</span></code></pre></div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="fruitful-functions-and-void-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="while-iteration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="infinite-loops.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="for-iteration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>فصل 5 تکرار | پایتون و آر</title>
-  <meta name="description" content="فصل 5 تکرار | پایتون و آر" />
+  <title>6.4 متدهای رشته‌ای | پایتون و آر</title>
+  <meta name="description" content="6.4 متدهای رشته‌ای | پایتون و آر" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta property="og:title" content="6.4 متدهای رشته‌ای | پایتون و آر" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://mohsenebrahimyir.github.io/py-r/" />
   <meta property="og:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta name="twitter:title" content="6.4 متدهای رشته‌ای | پایتون و آر" />
   
   
   <meta name="twitter:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="fruitful-functions-and-void-functions.html"/>
-<link rel="next" href="while-iteration.html"/>
+<link rel="prev" href="in-operation.html"/>
+<link rel="next" href="format-operator.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -269,22 +269,42 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="iteration" class="section level1" number="5">
-<h1><span class="header-section-number">فصل 5</span> تکرار</h1>
-<p>برای جلوگیری از دویاره نویسی در برنامه‌ها از
-ساختار حلقه
-(<span dir="ltr">Loop</span>)
-یا تکرار
-(<span dir="ltr">Iteration</span>)
-می‌وان استفاده کرد.</p>
+<div id="string-methods" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> متدهای رشته‌ای</h2>
+<p>]</p>
+<p>پایتون تابعی به نام
+<span dir="ltr"><code>dir</code></span>
+دارد که متدهای مربوط به یک شیئ را لیست می‌کند و همچنین با استفاده از
+<span dir="ltr"><code>type</code></span>
+می‌توانیم نوع شیئ را تشخیص دهیم:</p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb63-1"><a href="string-methods.html#cb63-1" aria-hidden="true" tabindex="-1"></a>stuff <span class="op">=</span> <span class="st">&#39;Hello world&#39;</span></span>
+<span id="cb63-2"><a href="string-methods.html#cb63-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(stuff)</span></code></pre></div>
+<pre class="output"><code>&lt;class &#39;str&#39;&gt;</code></pre>
+<div class="sourceCode" id="cb65"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb65-1"><a href="string-methods.html#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="bu">dir</span>(stuff)</span></code></pre></div>
+<pre><code>[&#39;__add__&#39;, &#39;__class__&#39;, &#39;__contains__&#39;, &#39;__delattr__&#39;, &#39;__dir__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__getattribute__&#39;, &#39;__getitem__&#39;, &#39;__getnewargs__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__iter__&#39;, &#39;__le__&#39;, &#39;__len__&#39;, &#39;__lt__&#39;, &#39;__mod__&#39;, &#39;__mul__&#39;, &#39;__ne__&#39;, &#39;__new__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__rmod__&#39;, &#39;__rmul__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;, &#39;capitalize&#39;, &#39;casefold&#39;, &#39;center&#39;, &#39;count&#39;, &#39;encode&#39;, &#39;endswith&#39;, &#39;expandtabs&#39;, &#39;find&#39;, &#39;format&#39;, &#39;format_map&#39;, &#39;index&#39;, &#39;isalnum&#39;, &#39;isalpha&#39;, &#39;isascii&#39;, &#39;isdecimal&#39;, &#39;isdigit&#39;, &#39;isidentifier&#39;, &#39;islower&#39;, &#39;isnumeric&#39;, &#39;isprintable&#39;, &#39;isspace&#39;, &#39;istitle&#39;, &#39;isupper&#39;, &#39;join&#39;, &#39;ljust&#39;, &#39;lower&#39;, &#39;lstrip&#39;, &#39;maketrans&#39;, &#39;partition&#39;, &#39;replace&#39;, &#39;rfind&#39;, &#39;rindex&#39;, &#39;rjust&#39;, &#39;rpartition&#39;, &#39;rsplit&#39;, &#39;rstrip&#39;, &#39;split&#39;, &#39;splitlines&#39;, &#39;startswith&#39;, &#39;strip&#39;, &#39;swapcase&#39;, &#39;title&#39;, &#39;translate&#39;, &#39;upper&#39;, &#39;zfill&#39;]</code></pre>
+<p>روش دیگر برای یافتن موقعیت یک زیررشته و یا یک کاراکتر خاص در یک رشته اصلی،
+استفاده از متد
+[<code>find</code>]{dir-ltr}
+می‌باشد:</p>
+<div class="sourceCode" id="cb67"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb67-1"><a href="string-methods.html#cb67-1" aria-hidden="true" tabindex="-1"></a>word <span class="op">=</span> <span class="st">&#39;banana&#39;</span></span>
+<span id="cb67-2"><a href="string-methods.html#cb67-2" aria-hidden="true" tabindex="-1"></a>index <span class="op">=</span> word.find(<span class="st">&#39;a&#39;</span>)</span>
+<span id="cb67-3"><a href="string-methods.html#cb67-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(index)</span></code></pre></div>
+<pre class="output"><code>1</code></pre>
+<p>خوب است با متدهای
+<span dir="ltr"><code>strip</code></span>
+و
+<span dir="ltr"><code>startwith</code></span>
+و</p>
+<p><span dir="ltr"><code>lower</code></span></p>
+<p>برای آشنایی بیشتر با متدهای رشته‌ای، در برنامه پایتون خودمان تمرین کنیم.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="fruitful-functions-and-void-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="while-iteration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="in-operation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="format-operator.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

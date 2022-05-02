@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>فصل 5 تکرار | پایتون و آر</title>
-  <meta name="description" content="فصل 5 تکرار | پایتون و آر" />
+  <title>7.2 خواندن فایل | پایتون و آر</title>
+  <meta name="description" content="7.2 خواندن فایل | پایتون و آر" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta property="og:title" content="7.2 خواندن فایل | پایتون و آر" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://mohsenebrahimyir.github.io/py-r/" />
   <meta property="og:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta name="twitter:title" content="7.2 خواندن فایل | پایتون و آر" />
   
   
   <meta name="twitter:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="fruitful-functions-and-void-functions.html"/>
-<link rel="next" href="while-iteration.html"/>
+<link rel="prev" href="open-file.html"/>
+<link rel="next" href="search-in-file.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -269,22 +269,43 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="iteration" class="section level1" number="5">
-<h1><span class="header-section-number">فصل 5</span> تکرار</h1>
-<p>برای جلوگیری از دویاره نویسی در برنامه‌ها از
-ساختار حلقه
-(<span dir="ltr">Loop</span>)
-یا تکرار
-(<span dir="ltr">Iteration</span>)
-می‌وان استفاده کرد.</p>
+<div id="read-file" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> خواندن فایل</h2>
+<p>با بازکردن فایل، تنها یک
+<span dir="ltr"><code>handle</code></span>
+در اختیار خواهیم داشت تا بتوانیم با استفاده از آن با فایل موردنظر کار کنیم.
+بنابریان برای خواندن فایل، می‌بایست با یک دستور حلقه
+<span dir="ltr"><code>for</code></span>
+ساده، اقدام به خواندن فایل کنیم:</p>
+<div class="sourceCode" id="cb80"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb80-1"><a href="read-file.html#cb80-1" aria-hidden="true" tabindex="-1"></a>fhand <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;mbox.txt&#39;</span>)</span>
+<span id="cb80-2"><a href="read-file.html#cb80-2" aria-hidden="true" tabindex="-1"></a>count <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb80-3"><a href="read-file.html#cb80-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> fhand:</span>
+<span id="cb80-4"><a href="read-file.html#cb80-4" aria-hidden="true" tabindex="-1"></a>    count <span class="op">=</span> count <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb80-5"><a href="read-file.html#cb80-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Line Count:&#39;</span>, count)</span></code></pre></div>
+<pre><code>Line Count: 7</code></pre>
+<p>با این دستورات، ما سعی کرده‌ایم که فایل را خط به خط بخوانیم.
+اما این طریقه خواندن برای فایل‌های بزرگ مورد استفاده قرار می‌گیرد.
+اگر فایلی داشته باشیم و بدانیم حجم آن کم است، می‌توانیم از دستورات زیر
+استفاده کنیم:</p>
+<div class="sourceCode" id="cb82"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb82-1"><a href="read-file.html#cb82-1" aria-hidden="true" tabindex="-1"></a>fhand <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;mbox.txt&#39;</span>)</span>
+<span id="cb82-2"><a href="read-file.html#cb82-2" aria-hidden="true" tabindex="-1"></a>inp <span class="op">=</span> fhand.read()</span>
+<span id="cb82-3"><a href="read-file.html#cb82-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(inp))</span></code></pre></div>
+<pre class="output"><code>334</code></pre>
+<div class="sourceCode" id="cb84"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb84-1"><a href="read-file.html#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(inp[:<span class="dv">20</span>])</span></code></pre></div>
+<pre class="output"><code>From stephen.marquar</code></pre>
+<p>در این حالت بهتر است رشته خوانده شده از فایل را در یک متغیر ذخیره کنیم، چراکه
+با خواندن فایل بعدی به همین روش، محتویات فایل قبلی را از دست خواهیم داد،
+به همین دلیل ما از متغیر
+<code>inp</code>
+در دستورات فوق استفاده کردیم.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="fruitful-functions-and-void-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="while-iteration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="open-file.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="search-in-file.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

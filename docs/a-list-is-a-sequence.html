@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>فصل 5 تکرار | پایتون و آر</title>
-  <meta name="description" content="فصل 5 تکرار | پایتون و آر" />
+  <title>8.1 لیست یک دنباله است | پایتون و آر</title>
+  <meta name="description" content="8.1 لیست یک دنباله است | پایتون و آر" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta property="og:title" content="8.1 لیست یک دنباله است | پایتون و آر" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://mohsenebrahimyir.github.io/py-r/" />
   <meta property="og:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta name="twitter:title" content="8.1 لیست یک دنباله است | پایتون و آر" />
   
   
   <meta name="twitter:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="fruitful-functions-and-void-functions.html"/>
-<link rel="next" href="while-iteration.html"/>
+<link rel="prev" href="lists.html"/>
+<link rel="next" href="traversing-a-list.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -269,22 +269,50 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="iteration" class="section level1" number="5">
-<h1><span class="header-section-number">فصل 5</span> تکرار</h1>
-<p>برای جلوگیری از دویاره نویسی در برنامه‌ها از
-ساختار حلقه
-(<span dir="ltr">Loop</span>)
-یا تکرار
-(<span dir="ltr">Iteration</span>)
-می‌وان استفاده کرد.</p>
+<div id="a-list-is-a-sequence" class="section level2" number="8.1">
+<h2><span class="header-section-number">8.1</span> لیست یک دنباله است</h2>
+<p>برای کنارهم قرار دادن چندین داده با نوع مختلف، می‌توان از لیست استفاده کرد.
+یکی از راه‌های ایجاد لیست، بکاربردن براکت در تعریف آن است:</p>
+<div class="sourceCode" id="cb98"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb98-1"><a href="a-list-is-a-sequence.html#cb98-1" aria-hidden="true" tabindex="-1"></a>cheeses <span class="op">=</span> [<span class="st">&#39;Cheddar&#39;</span>, <span class="st">&#39;Edam&#39;</span>, <span class="st">&#39;Gouda&#39;</span>]</span>
+<span id="cb98-2"><a href="a-list-is-a-sequence.html#cb98-2" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">17</span>, <span class="dv">123</span>]</span>
+<span id="cb98-3"><a href="a-list-is-a-sequence.html#cb98-3" aria-hidden="true" tabindex="-1"></a>empty <span class="op">=</span> []</span>
+<span id="cb98-4"><a href="a-list-is-a-sequence.html#cb98-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(cheeses, numbers, empty)</span></code></pre></div>
+<pre class="output"><code>[&#39;Cheddar&#39;, &#39;Edam&#39;, &#39;Gouda&#39;] [17, 123] []</code></pre>
+<p>اما همانطور که گفته بودیم، عناصر لیست می‌توانند نوع‌های متفاوت از هم داشته باشند:</p>
+<div class="sourceCode" id="cb100"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb100-1"><a href="a-list-is-a-sequence.html#cb100-1" aria-hidden="true" tabindex="-1"></a>multi_types_items <span class="op">=</span> [<span class="st">&#39;spam&#39;</span>, <span class="fl">2.0</span>, <span class="dv">5</span>, [<span class="dv">10</span>, <span class="dv">20</span>]]</span></code></pre></div>
+<p>در دو مثال قبلی؛ تعداد عناصر لیست را به این شکل محاسبه می‌کنیم:</p>
+<p>لیست
+<span dir="ltr"><code>cheeses</code></span>
+دارای 3 عنصر است.
+لیست
+<span dir="ltr"><code>numbers</code></span>
+دو عنصر دارد و لیست
+<span dir="ltr"><code>multi_types_items</code></span>
+شامل 4 عنصر می‌شود. چراکه لیست داخلی که شامل عناصر 10 و 20 هست، در لیست اصلی،
+به عنوان یک عنصر و یا داده درنظرگرفته می‌شود.</p>
+<p>برای تغییر مقادیر موجود در لیست، می‌بایست بتوانیم به هر داده دسترسی داشته باشیم،
+به این منظور از اندیس برای آدرس‌دهی استفاده می‌کنیم:</p>
+<div class="sourceCode" id="cb101"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb101-1"><a href="a-list-is-a-sequence.html#cb101-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">17</span>, <span class="dv">123</span>]</span>
+<span id="cb101-2"><a href="a-list-is-a-sequence.html#cb101-2" aria-hidden="true" tabindex="-1"></a>numbers[<span class="dv">1</span>] <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb101-3"><a href="a-list-is-a-sequence.html#cb101-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(numbers)</span></code></pre></div>
+<pre class="output"><code>[17, 5]</code></pre>
+<p>و یا برای اینکه بدانیم داده مورد نظر ما در لیست قرار گرفته یا خیر، می‌توان از
+این روش استفاده کرد:</p>
+<div class="sourceCode" id="cb103"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb103-1"><a href="a-list-is-a-sequence.html#cb103-1" aria-hidden="true" tabindex="-1"></a>cheeses <span class="op">=</span> [<span class="st">&#39;Cheddar&#39;</span>, <span class="st">&#39;Edam&#39;</span>, <span class="st">&#39;Gouda&#39;</span>]</span>
+<span id="cb103-2"><a href="a-list-is-a-sequence.html#cb103-2" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;Edam&#39;</span> <span class="kw">in</span> cheeses</span></code></pre></div>
+<pre class="output"><code>True</code></pre>
+<p>و یا:</p>
+<div class="sourceCode" id="cb105"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb105-1"><a href="a-list-is-a-sequence.html#cb105-1" aria-hidden="true" tabindex="-1"></a>cheeses <span class="op">=</span> [<span class="st">&#39;Cheddar&#39;</span>, <span class="st">&#39;Edam&#39;</span>, <span class="st">&#39;Gouda&#39;</span>]</span>
+<span id="cb105-2"><a href="a-list-is-a-sequence.html#cb105-2" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;Brie&#39;</span> <span class="kw">in</span> cheeses</span></code></pre></div>
+<pre class="output"><code>False</code></pre>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="fruitful-functions-and-void-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="while-iteration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="lists.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="traversing-a-list.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

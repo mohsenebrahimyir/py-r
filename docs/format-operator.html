@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>فصل 5 تکرار | پایتون و آر</title>
-  <meta name="description" content="فصل 5 تکرار | پایتون و آر" />
+  <title>6.5 عملگر فرمت | پایتون و آر</title>
+  <meta name="description" content="6.5 عملگر فرمت | پایتون و آر" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta property="og:title" content="6.5 عملگر فرمت | پایتون و آر" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://mohsenebrahimyir.github.io/py-r/" />
   <meta property="og:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta name="twitter:title" content="6.5 عملگر فرمت | پایتون و آر" />
   
   
   <meta name="twitter:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="fruitful-functions-and-void-functions.html"/>
-<link rel="next" href="while-iteration.html"/>
+<link rel="prev" href="string-methods.html"/>
+<link rel="next" href="files.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -269,22 +269,52 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="iteration" class="section level1" number="5">
-<h1><span class="header-section-number">فصل 5</span> تکرار</h1>
-<p>برای جلوگیری از دویاره نویسی در برنامه‌ها از
-ساختار حلقه
-(<span dir="ltr">Loop</span>)
-یا تکرار
-(<span dir="ltr">Iteration</span>)
-می‌وان استفاده کرد.</p>
+<div id="format-operator" class="section level2" number="6.5">
+<h2><span class="header-section-number">6.5</span> عملگر فرمت</h2>
+<p>عملگر <code>format</code>
+<code>%</code>،
+به ما اجازه می‌دهد تا رشته‌ها را بسازیم و بخش‌هایی از رشته‌ها را با داده‌های
+ذخیره شده در متغیرها جایگزین کنیم:</p>
+<div class="sourceCode" id="cb69"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb69-1"><a href="format-operator.html#cb69-1" aria-hidden="true" tabindex="-1"></a>camels <span class="op">=</span> <span class="dv">42</span></span>
+<span id="cb69-2"><a href="format-operator.html#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;%d&#39;</span> <span class="op">%</span> camels</span></code></pre></div>
+<pre class="output"><code>&#39;42&#39;</code></pre>
+<p>در مثال بالا توانستیم حروف 4 و 2 را به عدد 42 تبدیل کنیم.</p>
+<p><code>d</code> مخفف “اعشاری” است.
+و یا این مثال:</p>
+<div class="sourceCode" id="cb71"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb71-1"><a href="format-operator.html#cb71-1" aria-hidden="true" tabindex="-1"></a>camels <span class="op">=</span> <span class="dv">42</span></span>
+<span id="cb71-2"><a href="format-operator.html#cb71-2" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;I have spotted %d camels.&#39;</span> <span class="op">%</span> camels</span></code></pre></div>
+<pre><code>&#39;I have spotted 42 camels.&#39;</code></pre>
+<p>به همین ترتیب، عملگرهای
+<span dir="ltr"><code>%g</code></span>
+و
+<span dir="ltr"><code>%s</code></span>
+وظیفه قالب‌بندی یک عدد ممیز شناور و قالب‌بندی یک رشته را به عهده دارند:</p>
+<div class="sourceCode" id="cb73"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb73-1"><a href="format-operator.html#cb73-1" aria-hidden="true" tabindex="-1"></a>fmt_string <span class="op">=</span> <span class="st">&#39;In </span><span class="sc">%d</span><span class="st"> years I have spotted </span><span class="sc">%g</span><span class="st"> </span><span class="sc">%s</span><span class="st">.&#39;</span> <span class="op">%</span> (<span class="dv">3</span>, <span class="fl">0.1</span>, <span class="st">&#39;camels&#39;</span>)</span>
+<span id="cb73-2"><a href="format-operator.html#cb73-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb73-3"><a href="format-operator.html#cb73-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(fmt_string)</span></code></pre></div>
+<pre class="output"><code>&#39;In 3 years I have spotted 0.1 camels.&#39;</code></pre>
+<p>یک شکل جدید از قالب رشته‌ای در نسخه‌های جدید پایتون
+استفاده از
+<code>f''</code>
+یا همان
+<span dir="ltr">f-string</span>
+است.</p>
+<div class="sourceCode" id="cb75"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb75-1"><a href="format-operator.html#cb75-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">27</span></span>
+<span id="cb75-2"><a href="format-operator.html#cb75-2" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">&quot;Mohsen&quot;</span></span>
+<span id="cb75-3"><a href="format-operator.html#cb75-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-4"><a href="format-operator.html#cb75-4" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> <span class="ss">f&quot;Mr </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss"> is </span><span class="sc">{</span>age<span class="sc">}</span><span class="ss"> years old.&quot;</span></span>
+<span id="cb75-5"><a href="format-operator.html#cb75-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(text)</span></code></pre></div>
+<pre><code>Mr Mohsen is 27 years old.</code></pre>
+
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="fruitful-functions-and-void-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="while-iteration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="string-methods.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="files.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>فصل 5 تکرار | پایتون و آر</title>
-  <meta name="description" content="فصل 5 تکرار | پایتون و آر" />
+  <title>5.1 عبارت while | پایتون و آر</title>
+  <meta name="description" content="5.1 عبارت while | پایتون و آر" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta property="og:title" content="5.1 عبارت while | پایتون و آر" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://mohsenebrahimyir.github.io/py-r/" />
   <meta property="og:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta name="twitter:title" content="5.1 عبارت while | پایتون و آر" />
   
   
   <meta name="twitter:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="fruitful-functions-and-void-functions.html"/>
-<link rel="next" href="while-iteration.html"/>
+<link rel="prev" href="iteration.html"/>
+<link rel="next" href="infinite-loops.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -269,22 +269,64 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="iteration" class="section level1" number="5">
-<h1><span class="header-section-number">فصل 5</span> تکرار</h1>
-<p>برای جلوگیری از دویاره نویسی در برنامه‌ها از
-ساختار حلقه
-(<span dir="ltr">Loop</span>)
-یا تکرار
-(<span dir="ltr">Iteration</span>)
-می‌وان استفاده کرد.</p>
+<div id="while-iteration" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> عبارت <span dir="ltr"><code>while</code></span></h2>
+<p>برای شروع آشنایی با عبارت و در حقیقت ساختار
+<span dir="ltr"><code>while</code></span>
+به مثال زیر توجه کنید:</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="while-iteration.html#cb47-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb47-2"><a href="while-iteration.html#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> n <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb47-3"><a href="while-iteration.html#cb47-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(n)</span>
+<span id="cb47-4"><a href="while-iteration.html#cb47-4" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> n <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb47-5"><a href="while-iteration.html#cb47-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-6"><a href="while-iteration.html#cb47-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Blastoff!&#39;</span>)</span></code></pre></div>
+<pre class="output"><code>5
+4
+3
+2
+1
+Blastoff!</code></pre>
+<p>به این معنی که “تا وقتی که
+<span dir="ltr"><code>n</code></span>
+بزرگتر از 0 است، مقدار
+<span dir="ltr"><code>n</code></span>
+را نمایش بده و سپس مقدار
+<span dir="ltr"><code>n</code></span>
+را به اندازه 1 واحد کاهش بده.</p>
+<p>وقتی مقدار
+<span dir="ltr"><code>n</code></span>
+به 0 رسید، کنترل برنامه از دستور
+<span dir="ltr"><code>while</code></span>
+خارج می‌شود و کلمه
+<span dir="ltr"><code>Blastoff</code></span>
+را نمایش می‌دهد!</p>
+<p>ساختار استفاده از عبارت
+<span dir="ltr"><code>while</code></span>
+به شرح زیر است:</p>
+<ol style="list-style-type: decimal">
+<li><p>شرایط را ارزیابی کنید، درست یا غلط را نشان دهید.</p></li>
+<li><p>اگر شرط نادرست است، از دستور
+<span dir="ltr"><code>while</code></span>
+خارج شده و در دستور بعدی اجرا را ادامه دهید.</p></li>
+<li><p>اگر شرط درست است، بدنه را اجرا کنید و سپس به مرحله 1 برگردید.</p></li>
+</ol>
+<p>این نوع جریان حلقه نامیده می‌شود زیرا در مرحله سوم به سمت بالا باز می‌گردد.
+هر بار که بدنه حلقه را اجرا می‌کنیم، آن را یک تکرار می‌نامیم.
+برای حلقه بالا، می‌گوییم: «پنج تکرار داشت»، یعنی بدنه حلقه پنج بار اجرا شده است.</p>
+<p>بدنه حلقه باید مقدار یک یا چند متغیر را تغییر دهد تا در نهایت شرط نادرست شود و
+حلقه خاتمه یابد.</p>
+<p>ما متغیری را که هر بار که حلقه اجرا می‌شود و مقدار متغیر تغییر می‌کند،
+فراخوانی می‌کنیم و نیز زمانی که حلقه، مقدار متغیر تکرار را به پایان می‌رساند،
+اگر متغیر تکراری وجود نداشته باشد، حلقه برای همیشه
+تکرار می‌شود و در نتیجه یک حلقه بی نهایت ایجاد می‌شود.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="fruitful-functions-and-void-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="while-iteration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="iteration.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="infinite-loops.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

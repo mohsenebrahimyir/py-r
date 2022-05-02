@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>فصل 5 تکرار | پایتون و آر</title>
-  <meta name="description" content="فصل 5 تکرار | پایتون و آر" />
+  <title>1.3 مترجم و کامپایلر | پایتون و آر</title>
+  <meta name="description" content="1.3 مترجم و کامپایلر | پایتون و آر" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta property="og:title" content="1.3 مترجم و کامپایلر | پایتون و آر" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://mohsenebrahimyir.github.io/py-r/" />
   <meta property="og:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta name="twitter:title" content="1.3 مترجم و کامپایلر | پایتون و آر" />
   
   
   <meta name="twitter:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="fruitful-functions-and-void-functions.html"/>
-<link rel="next" href="while-iteration.html"/>
+<link rel="prev" href="understanding-programming.html"/>
+<link rel="next" href="variables-expressions-commands.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -269,22 +269,76 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="iteration" class="section level1" number="5">
-<h1><span class="header-section-number">فصل 5</span> تکرار</h1>
-<p>برای جلوگیری از دویاره نویسی در برنامه‌ها از
-ساختار حلقه
-(<span dir="ltr">Loop</span>)
-یا تکرار
-(<span dir="ltr">Iteration</span>)
-می‌وان استفاده کرد.</p>
+<div id="interpreter-and-compiler" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> مترجم و کامپایلر</h2>
+<p>پایتون یک <strong>زبان سطح بالا</strong> محسوب می‌شود. به این معنی که به زبان انسان نزدیک‌تر است
+تا به زبان سخت‌افزار کامپیوتر.
+اما مفهوم دستورات زبان‌های سطح بالا توسط
+CPU
+قابل فهم نیست. چرا که
+CPU
+فقط دستوراتی که به <strong>زبان ماشین</strong> نوشته شده باشند را درک می‌کند.
+زبان ماشین از دو نشانه <code>0</code> و <code>1</code> تشکیل شده است و
+CPU
+قادر است تنها همین زبان را بفهمد و دستورات آن را اجرا کند:</p>
+<pre><code>00101000111010010010101000000111
+11100110000011101010010101101101
+...</code></pre>
+<p>پس برنامه‌های زبان‌های سطح بالایی مثل پایتون را چگونه باید برای
+CPU
+شرح داد؟</p>
+<p>مترجم‌های متعددی برای ترجمه و تبدیل کدهای زبان سطح بالا به زبان سطح ماشین، وجود دارد.
+اما از آن‌جایی که زبان ماشین کاملا وابسته به سخت‌افزار کامپیوتر است،
+بنابراین ما یک زبان ماشین که بتواند با انواع سخت‌افزار هماهنگ شود را نداریم.
+برنامه‌های نوشته شده به زبان‌های سطح بالا را می‌توان با استفاده از یک مفسر متفاوت
+در ماشین (همان سخت‌افزار) جدید یا کامپایل مجدد کد برای ایجاد نسخه زبان ماشین
+برنامه موردنظر برای ماشین جدید بین رایانه های مختلف جابجا کرد.</p>
+<p>این مترجمان زبان برنامه‌نویسی به دو دسته کلی تقسیم می شوند:</p>
+<ol style="list-style-type: decimal">
+<li>مفسر <span dir="ltr">(Interpreter)</span></li>
+<li>کامپایلر <span dir="ltr">(Compiler)</span></li>
+</ol>
+<p>یک <strong>مفسر</strong> کد برنامه نوشته شده توسط برنامه‌نویس را خوانده، آن را تجزیه
+می‌کند و دستورالعمل‌ها را تفسیر می‌نماید.
+با این توصیف، پایتون یک مفسر محسوب می‌شود که کدهای برنامه ما رافوراً پردازش می‌کند.</p>
+<p>برخی دستورات پایتون شامل مقادیری است که مجدداً دراثنای برنامه، برنامه‌نویس
+به آن نیاز خواهد داشت.
+بنابراین ما به عنوان برنامه‌نویس می‌بایست یک نام نمادین برای این مقادیر تعریف کنیم
+که در وقت لازم با این نام تعریف شده، پایتون را متوجه استفاده از آن مقدار موردنظر
+گردانیم.
+واژه‌ای که برای این نام مخصوص استفاده می‌شود،
+<strong>Variable</strong>
+یا <strong>متغیر</strong> است:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="interpreter-and-compiler.html#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">6</span></span>
+<span id="cb2-2"><a href="interpreter-and-compiler.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code></pre></div>
+<pre class="output"><code>6</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="interpreter-and-compiler.html#cb4-1" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> x <span class="op">*</span> <span class="dv">7</span></span>
+<span id="cb4-2"><a href="interpreter-and-compiler.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(y)</span></code></pre></div>
+<pre class="output"><code>42</code></pre>
+<p>در این مثال ساده، ما سعی کردیم به پایتون بگوییم در ابتدا برای مقدار <code>6</code>، برچسبی به نام
+<code>x</code>
+در نظر بگیرد و سپس در دستور بعدی همین مقدار را با نام
+<code>x</code>
+بازیابی کردیم. آنگاه آن را در <code>7</code> ضرب کرده و حاصل آن را در متغیر جدیدی با نام
+<code>y</code>
+ذخیره کردیم.</p>
+<p>دو خط مربوط به تابع
+<code>print</code>
+مقادیر
+<code>x</code>
+و
+<code>y</code>
+صرفاً برای مشاهده مقادیر ذخیره شده در متغیرهای بکار رفته در پرانتز می‌باشد.</p>
+
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="fruitful-functions-and-void-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="while-iteration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="understanding-programming.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="variables-expressions-commands.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

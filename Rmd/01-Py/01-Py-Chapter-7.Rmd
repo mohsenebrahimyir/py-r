@@ -1,57 +1,62 @@
-# بخش هفتم: فایل‌ها{#files}
+# فایل‌ها {#files}
 
 
-## بازکردن فایل
+## بازکردن فایل {#open-file}
 
-ممکن است داده‌های ما از قبل در فایلی موجود باشد، دراینصورت باید بتوانیم آن را 
+ممکن است داده‌های ما از قبل در فایلی موجود باشد
+([دانلود فایل](./data/mbox.txt))
+، در اینصورت باید بتوانیم آن را 
 باز کنیم:
 
 ```python
-fhand = open('./ref/mbox.txt')
+fhand = open('mbox.txt')
 print(fhand)
+```
+```output
+<_io.TextIOWrapper name='mbox.txt' mode='r' encoding='UTF-8'>
 ```
 
 اگر باز کردن موفقیت‌آمیز باشد، سیستم‌عامل یک 
-['handle ']{dir=ltr}
+[`handle`]{dir=ltr}
  برای فایل به ما برمی‌گرداند. 
-['handle']{dir=ltr}، 
+[`handle`]{dir=ltr}، 
 داده‌های واقعی موجود در فایل نیست، اما در عوض یک 
-['handle']{dir=ltr}
+[`handle`]{dir=ltr}
  است که می‌توانیم برای خواندن داده‌ها از آن استفاده کنیم. 
 اگر فایل درخواستی وجود داشته باشد و مجوزهای لازم برای 
 خواندن فایل را داشته باشیم، به ما یک 
-['handle']{dir=ltr}
+[`handle`]{dir=ltr}
  داده می شود.
- 
- 
- ```{r}
-#knitr::include_graphics("./img/Figure 7.2-- A File Handle.PNG")
-```
 
 اما چنانچه فایل وجود نداشته باشد، اجرای این دستور ناموفق خواهد بود و 
-['handle']{dir=ltr}
+[`handle`]{dir=ltr}
 نخواهیم داشت: 
 
-[`Traceback (most recent call last):`]{dir=ltr}
-[`File "<stdin>", line 1, in <module>`]{dir=ltr}
-[`FileNotFoundError: [Errno 2] No such file or directory: 'stuff.txt'`]{dir=ltr}
+```output
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: 'mbox.txt'
+```
 
-## خواندن فایل
+## خواندن فایل {#read-file}
 
 با بازکردن فایل، تنها یک 
 [`handle`]{dir=ltr} 
 در اختیار خواهیم داشت تا بتوانیم با استفاده از آن با فایل موردنظر کار کنیم. 
 بنابریان برای خواندن فایل، می‌بایست با یک دستور حلقه 
-['for']{dir=ltr} 
+[`for`]{dir=ltr} 
 ساده، اقدام به خواندن فایل کنیم:
 
 
 ```python
-fhand = open('./ref/mbox.txt')
+fhand = open('mbox.txt')
 count = 0
 for line in fhand:
-  count = count + 1
+    count = count + 1
 print('Line Count:', count)
+```
+```
+Line Count: 7
 ```
 
 با این دستورات، ما سعی کرده‌ایم که فایل را خط به خط بخوانیم. 
@@ -61,16 +66,21 @@ print('Line Count:', count)
 
 
 ```python
-fhand = open('./ref/mbox.txt')
+fhand = open('mbox.txt')
 inp = fhand.read()
 print(len(inp))
+```
+```output
+334
 ```
 
 
 ```python
 print(inp[:20])
 ```
-
+```output
+From stephen.marquar
+```
 
 در این حالت بهتر است رشته خوانده شده از فایل را در یک متغیر ذخیره کنیم، چراکه 
 با خواندن فایل بعدی به همین روش، محتویات فایل قبلی را از دست خواهیم داد، 
@@ -79,21 +89,23 @@ print(inp[:20])
 در دستورات فوق استفاده کردیم.
 
 
-## جستجو در فایل
+## جستجو در فایل {#search-in-file}
 
 اگر در فایل محتویات داده به دنبال کلمه و یا داده خاصی هستیم، می‌توانیم آن را 
 در فایلی که از قبل آن را باز کرده و خوانده‌ایم، جستجو کنیم:
 
 
 ```python
-fhand = open('./ref/mbox.txt')
+fhand = open('mbox.txt')
 count = 0
 for line in fhand:
-  line = line.rstrip()
-  if line.startswith('From:'):
-    print(line)
+    line = line.rstrip()
+    if line.startswith('From:'):
+        print(line)
 ```
-
+```output
+From: stephen.marquard@uct.ac.za
+```
 در این مثال، ما به دنبال کلمه 
 [`'From'`]{dir=ltr} 
 هستیم.
@@ -104,8 +116,7 @@ for line in fhand:
 فضای خالی را در سمت راست رشته موجود در فایل، حذف کرده‌ایم.
 
 
-## اجازه دادن به کاربر برای انتخاب نام فایل
-
+## انتخاب نام فایل {#select-file}
 
 این مسئله برای ما پیش آمده که برای باز کردن یک فایل، همیشه نام و آدرس دقیق آن
 را نمی‌دانیم و نیاز است تا بتوانیم در مرورگر سیستم فایل خود، آن را جستجو کنیم. 
@@ -118,16 +129,17 @@ fname = input('Enter the file name: ')
 fhand = open(fname)
 count = 0
 for line in fhand:
-  if line.startswith('Subject:'):
-    count = count + 1
+    if line.startswith('Subject:'):
+        count = count + 1
 print('There were', count, 'subject lines in', fname)
+```
+```output
+Enter the file name: mbox.txt
+There were 1 subject lines in mbox.txt
 ```
 
 
-## استفاده از 
-[`try`]{dir=ltr}،
-[`except`]{dir=ltr} و
-[`open`]{dir=ltr} 
+## استفاده از `try`، `except` و `open` {#try-except-open-file}
 
 
 از کد قبل به خاطر داریم که ما به کاربر اجازه دادیم که نام فایل حود را برای 
@@ -135,7 +147,7 @@ print('There were', count, 'subject lines in', fname)
 بنابراین باید تمهیداتی برای این کار بیاندیشیم، چرا که گذشته از اینکه بازکردن 
 یک فایل غیرمرتبط برنامه را با خطا مواجه می‌کند، ممکن است فایلی که کاربر آن را 
 انتخاب کرده، عمداً و یا سهواً برای برنامه ما ضرر داشته باشد. بنابراین ما با 
-ایتفاده از  دستورات 
+استفاده از  دستورات 
 [`try`]{dir=ltr} ،
 [`except`]{dir=ltr} و
 [`open`]{dir=ltr} 
@@ -145,15 +157,20 @@ print('There were', count, 'subject lines in', fname)
 ```python
 fname = input('Enter the file name: ')
 try:
-  fhand = open(fname)
+    fhand = open(fname)
 except:
-  print('File cannot be opened:', fname)
-  exit()
+    print('File cannot be opened:', fname)
+    exit()
 count = 0
 for line in fhand:
-  if line.startswith('Subject:'):
-    count = count + 1
+    if line.startswith('Subject:'):
+      count = count + 1
 print('There were', count, 'subject lines in', fname)
+```
+```output
+Enter the file name: otherfile.txt
+File cannot be opened: otherfile.txt
+There were 0 subject lines in otherfile.txt
 ```
 
 همانطور که مشاهده می‌شود، تابع 
@@ -161,7 +178,7 @@ print('There were', count, 'subject lines in', fname)
 درصورت اینکه کاربر چیزی غیر از فایل را درخواست داده باشد، برنامه ما از اجرا 
 خارج می‌شود.
 
-## نوشتن در فایل 
+## نوشتن در فایل {#write-file}
 
 
 بیشتر اوقات افراد نیاز دارند که در فایل داده خود، ویرایش انجام داده یا 
@@ -173,6 +190,9 @@ print('There were', count, 'subject lines in', fname)
 fout = open('output.txt', 'w')
 print(fout)
 ```
+```output
+<_io.TextIOWrapper name='output.txt' mode='w' encoding='UTF-8'>
+```
 
 در اینجا چنانچه فایل موردنظر وجود داشته باشد، فایل باز شده و آماده نوشتن می‌باشد:
 در واقع پارمتر 
@@ -182,13 +202,18 @@ print(fout)
 
 مثلاً فرض کنیم می‌خواهیم متن زیر را در فایل بنویسیم: 
 
-[`This here's the wattle`]{dir=ltr} 
+```
+This here's the wattle
+```
 
 کد لازم برای این کار، به شکل زیر خواهد بود:
 
 ```python
 line1 = "This here's the wattle,\n"
 fout.write(line1)
+```
+```output
+24
 ```
 
 و درنهایت اینکه وقتی کارمان با فایلی تمام شد، می‌بایست حتماً آن را ببندیم:

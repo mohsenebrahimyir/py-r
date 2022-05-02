@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>فصل 5 تکرار | پایتون و آر</title>
-  <meta name="description" content="فصل 5 تکرار | پایتون و آر" />
+  <title>7.4 انتخاب نام فایل | پایتون و آر</title>
+  <meta name="description" content="7.4 انتخاب نام فایل | پایتون و آر" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta property="og:title" content="7.4 انتخاب نام فایل | پایتون و آر" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://mohsenebrahimyir.github.io/py-r/" />
   <meta property="og:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta name="twitter:title" content="7.4 انتخاب نام فایل | پایتون و آر" />
   
   
   <meta name="twitter:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="fruitful-functions-and-void-functions.html"/>
-<link rel="next" href="while-iteration.html"/>
+<link rel="prev" href="search-in-file.html"/>
+<link rel="next" href="try-except-open-file.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -269,22 +269,30 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="iteration" class="section level1" number="5">
-<h1><span class="header-section-number">فصل 5</span> تکرار</h1>
-<p>برای جلوگیری از دویاره نویسی در برنامه‌ها از
-ساختار حلقه
-(<span dir="ltr">Loop</span>)
-یا تکرار
-(<span dir="ltr">Iteration</span>)
-می‌وان استفاده کرد.</p>
+<div id="select-file" class="section level2" number="7.4">
+<h2><span class="header-section-number">7.4</span> انتخاب نام فایل</h2>
+<p>این مسئله برای ما پیش آمده که برای باز کردن یک فایل، همیشه نام و آدرس دقیق آن
+را نمی‌دانیم و نیاز است تا بتوانیم در مرورگر سیستم فایل خود، آن را جستجو کنیم.
+به این منظور، با استفاده از قطعه کد زیر، این امکان را به کاربر می‌دهیم که فایل
+موردنظر خود را ابتدا جستجو و سپس باز کند. در اینصورت ما دیگر نام فایل را بصورت
+مستقیم در کد خود نخواهیم داشت:</p>
+<div class="sourceCode" id="cb88"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb88-1"><a href="select-file.html#cb88-1" aria-hidden="true" tabindex="-1"></a>fname <span class="op">=</span> <span class="bu">input</span>(<span class="st">&#39;Enter the file name: &#39;</span>)</span>
+<span id="cb88-2"><a href="select-file.html#cb88-2" aria-hidden="true" tabindex="-1"></a>fhand <span class="op">=</span> <span class="bu">open</span>(fname)</span>
+<span id="cb88-3"><a href="select-file.html#cb88-3" aria-hidden="true" tabindex="-1"></a>count <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb88-4"><a href="select-file.html#cb88-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> fhand:</span>
+<span id="cb88-5"><a href="select-file.html#cb88-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> line.startswith(<span class="st">&#39;Subject:&#39;</span>):</span>
+<span id="cb88-6"><a href="select-file.html#cb88-6" aria-hidden="true" tabindex="-1"></a>        count <span class="op">=</span> count <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb88-7"><a href="select-file.html#cb88-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;There were&#39;</span>, count, <span class="st">&#39;subject lines in&#39;</span>, fname)</span></code></pre></div>
+<pre class="output"><code>Enter the file name: mbox.txt
+There were 1 subject lines in mbox.txt</code></pre>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="fruitful-functions-and-void-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="while-iteration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="search-in-file.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="try-except-open-file.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

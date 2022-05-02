@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>فصل 5 تکرار | پایتون و آر</title>
-  <meta name="description" content="فصل 5 تکرار | پایتون و آر" />
+  <title>5.2 حلقه‌های بی‌نهایت | پایتون و آر</title>
+  <meta name="description" content="5.2 حلقه‌های بی‌نهایت | پایتون و آر" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta property="og:title" content="5.2 حلقه‌های بی‌نهایت | پایتون و آر" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://mohsenebrahimyir.github.io/py-r/" />
   <meta property="og:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta name="twitter:title" content="5.2 حلقه‌های بی‌نهایت | پایتون و آر" />
   
   
   <meta name="twitter:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="fruitful-functions-and-void-functions.html"/>
-<link rel="next" href="while-iteration.html"/>
+<link rel="prev" href="while-iteration.html"/>
+<link rel="next" href="continue-iteration.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -269,22 +269,54 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="iteration" class="section level1" number="5">
-<h1><span class="header-section-number">فصل 5</span> تکرار</h1>
-<p>برای جلوگیری از دویاره نویسی در برنامه‌ها از
-ساختار حلقه
-(<span dir="ltr">Loop</span>)
-یا تکرار
-(<span dir="ltr">Iteration</span>)
-می‌وان استفاده کرد.</p>
+<div id="infinite-loops" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> حلقه‌های بی‌نهایت</h2>
+<p>در مورد شمارش معکوس، می‌توانیم ثابت کنیم که حلقه خاتمه می‌یابد زیرا می‌دانیم
+که مقدار
+<span dir="ltr"><code>n</code></span>
+محدود است و می‌بینیم که مقدار
+<span dir="ltr"><code>n</code></span>
+هر بار از طریق حلقه کوچکتر می‌شود، بنابراین در نهایت باید به 0 برسیم.
+در سایر مواقع، یک حلقه بی‌نهایت
+<span dir="ltr">Infinite loops</span>
+است زیرا هیچ متغیر تکراری ندارد
+(به شبه شرط منطقی داخل پرانتز در عبارت
+<span dir="ltr"><code>break</code></span>
+دقت کنید).</p>
+<p>کاربرد حلقه بی‌نهایت در این است که برخی اوقات تا زمانی که نیمی از بدنه را طی
+نکنیم، نمی‌دانیم آیا زمان پایان دادن به یک حلقه فرا رسیده است.
+در این صورت می‌توانیم یک حلقه بی‌نهایت را عمداً بنویسیم و سپس از دستور
+<span dir="ltr"><code>break</code></span>
+برای پرش از حلقه استفاده کنیم.</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="infinite-loops.html#cb49-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb49-2"><a href="infinite-loops.html#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="va">True</span>:</span>
+<span id="cb49-3"><a href="infinite-loops.html#cb49-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(n, end<span class="op">=</span><span class="st">&#39; &#39;</span>)</span>
+<span id="cb49-4"><a href="infinite-loops.html#cb49-4" aria-hidden="true" tabindex="-1"></a>  n <span class="op">=</span> n <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb49-5"><a href="infinite-loops.html#cb49-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-6"><a href="infinite-loops.html#cb49-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Done!&#39;</span>)</span></code></pre></div>
+<p>اگر مرتکب اشتباه شویم و این کد را اجرا کنیم، یاد خواهیم گرفت که
+چگونه فرآیند و یا مسیر پایتون را در سیستم خود متوقف کنیم و یا آن را خاتمه دهیم.
+این برنامه برای همیشه یا تا زمانی که باتری ما تمام شود اجرا می‌شود زیرا
+عبارت منطقی در بالای حلقه به دلیل این که عبارت مقدار ثابت
+<span dir="ltr"><code>True</code></span>
+است همیشه درست است.</p>
+<p>مثال زیر، کاربرد
+<span dir="ltr"><code>break</code></span>
+را به خوبی نشان می‌دهد:</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="infinite-loops.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="va">True</span>:</span>
+<span id="cb50-2"><a href="infinite-loops.html#cb50-2" aria-hidden="true" tabindex="-1"></a>    line <span class="op">=</span> <span class="bu">input</span>(<span class="st">&#39;&gt; &#39;</span>)</span>
+<span id="cb50-3"><a href="infinite-loops.html#cb50-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> line <span class="op">==</span> <span class="st">&#39;done&#39;</span>:</span>
+<span id="cb50-4"><a href="infinite-loops.html#cb50-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span></span>
+<span id="cb50-5"><a href="infinite-loops.html#cb50-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line)</span>
+<span id="cb50-6"><a href="infinite-loops.html#cb50-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Done!&#39;</span>)</span></code></pre></div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="fruitful-functions-and-void-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="while-iteration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="while-iteration.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="continue-iteration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

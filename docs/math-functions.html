@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>فصل 5 تکرار | پایتون و آر</title>
-  <meta name="description" content="فصل 5 تکرار | پایتون و آر" />
+  <title>4.4 توابع ریاضی | پایتون و آر</title>
+  <meta name="description" content="4.4 توابع ریاضی | پایتون و آر" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta property="og:title" content="4.4 توابع ریاضی | پایتون و آر" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://mohsenebrahimyir.github.io/py-r/" />
   <meta property="og:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta name="twitter:title" content="4.4 توابع ریاضی | پایتون و آر" />
   
   
   <meta name="twitter:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="fruitful-functions-and-void-functions.html"/>
-<link rel="next" href="while-iteration.html"/>
+<link rel="prev" href="type-conversion-functions.html"/>
+<link rel="next" href="random-numbers.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -269,22 +269,33 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="iteration" class="section level1" number="5">
-<h1><span class="header-section-number">فصل 5</span> تکرار</h1>
-<p>برای جلوگیری از دویاره نویسی در برنامه‌ها از
-ساختار حلقه
-(<span dir="ltr">Loop</span>)
-یا تکرار
-(<span dir="ltr">Iteration</span>)
-می‌وان استفاده کرد.</p>
+<div id="math-functions" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> توابع ریاضی</h2>
+<p>پایتون دارای یک ماژول ریاضی است که اکثر توابع ریاضی
+مشهور را ارائه می‌دهد. اما قبل از اینکه بتوانیم از ماژول
+استفاده کنیم، باید آن را وارد
+<span dir="ltr">(<code>import</code>)</span>
+کنیم:</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="math-functions.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span></code></pre></div>
+<p>این عبارت یک شی ماژول به نام
+<span dir="ltr"><code>math</code></span>
+ایجاد می کند.</p>
+<p>برای دسترسی به یکی از توابع، باید نام ماژول و
+نام تابع را که با یک نقطه از هم جدا شده اند
+(که به عنوان نقطه نیز شناخته می شود) مشخص کنیم.
+به این فرمت، علامت نقطه می گویند.</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="math-functions.html#cb34-1" aria-hidden="true" tabindex="-1"></a>ratio <span class="op">=</span> signal_power <span class="op">/</span> noise_power</span>
+<span id="cb34-2"><a href="math-functions.html#cb34-2" aria-hidden="true" tabindex="-1"></a>decibels <span class="op">=</span> <span class="dv">10</span> <span class="op">*</span> math.log10(ratio)</span>
+<span id="cb34-3"><a href="math-functions.html#cb34-3" aria-hidden="true" tabindex="-1"></a>radians <span class="op">=</span> <span class="fl">0.7</span></span>
+<span id="cb34-4"><a href="math-functions.html#cb34-4" aria-hidden="true" tabindex="-1"></a>height <span class="op">=</span> math.sin(radians)</span></code></pre></div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="fruitful-functions-and-void-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="while-iteration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="type-conversion-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="random-numbers.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

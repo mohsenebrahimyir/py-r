@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>فصل 5 تکرار | پایتون و آر</title>
-  <meta name="description" content="فصل 5 تکرار | پایتون و آر" />
+  <title>3.4 شرط‌های تو در تو | پایتون و آر</title>
+  <meta name="description" content="3.4 شرط‌های تو در تو | پایتون و آر" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta property="og:title" content="3.4 شرط‌های تو در تو | پایتون و آر" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://mohsenebrahimyir.github.io/py-r/" />
   <meta property="og:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta name="twitter:title" content="3.4 شرط‌های تو در تو | پایتون و آر" />
   
   
   <meta name="twitter:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="fruitful-functions-and-void-functions.html"/>
-<link rel="next" href="while-iteration.html"/>
+<link rel="prev" href="chained-conditionals.html"/>
+<link rel="next" href="try-except-statement.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -269,22 +269,26 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="iteration" class="section level1" number="5">
-<h1><span class="header-section-number">فصل 5</span> تکرار</h1>
-<p>برای جلوگیری از دویاره نویسی در برنامه‌ها از
-ساختار حلقه
-(<span dir="ltr">Loop</span>)
-یا تکرار
-(<span dir="ltr">Iteration</span>)
-می‌وان استفاده کرد.</p>
+<div id="nested-conditionals" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> شرط‌های تو در تو</h2>
+<p>یک عبارت شرطی نیز می‌تواند درون عبارت شرطی دیگری قرار گیرد و ساختار شرط‌های تو در تو
+(<span dir="ltr">Nested Conditionals</span>)
+را ایجاد کنند:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="nested-conditionals.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">==</span> y:</span>
+<span id="cb17-2"><a href="nested-conditionals.html#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;x and y are equal&#39;</span>)</span>
+<span id="cb17-3"><a href="nested-conditionals.html#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb17-4"><a href="nested-conditionals.html#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> x <span class="op">&lt;</span> y:</span>
+<span id="cb17-5"><a href="nested-conditionals.html#cb17-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&#39;x is less than y&#39;</span>)</span>
+<span id="cb17-6"><a href="nested-conditionals.html#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb17-7"><a href="nested-conditionals.html#cb17-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&#39;x is greater than y&#39;</span>)</span></code></pre></div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="fruitful-functions-and-void-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="while-iteration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="chained-conditionals.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="try-except-statement.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

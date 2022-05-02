@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>فصل 5 تکرار | پایتون و آر</title>
-  <meta name="description" content="فصل 5 تکرار | پایتون و آر" />
+  <title>1.1 معماری سخت‌افزار کامپیوتر | پایتون و آر</title>
+  <meta name="description" content="1.1 معماری سخت‌افزار کامپیوتر | پایتون و آر" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta property="og:title" content="1.1 معماری سخت‌افزار کامپیوتر | پایتون و آر" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://mohsenebrahimyir.github.io/py-r/" />
   <meta property="og:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta name="twitter:title" content="1.1 معماری سخت‌افزار کامپیوتر | پایتون و آر" />
   
   
   <meta name="twitter:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="fruitful-functions-and-void-functions.html"/>
-<link rel="next" href="while-iteration.html"/>
+<link rel="prev" href="why-learn-python.html"/>
+<link rel="next" href="understanding-programming.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -269,22 +269,50 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="iteration" class="section level1" number="5">
-<h1><span class="header-section-number">فصل 5</span> تکرار</h1>
-<p>برای جلوگیری از دویاره نویسی در برنامه‌ها از
-ساختار حلقه
-(<span dir="ltr">Loop</span>)
-یا تکرار
-(<span dir="ltr">Iteration</span>)
-می‌وان استفاده کرد.</p>
+<div id="computer-hardware-architect" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> معماری سخت‌افزار کامپیوتر</h2>
+<p>اگر ما در ابتدای ورود به مسیر برنامه‌نویسی هستیم، بهتر است کمی درمورد
+اینکه کامپیوتر چگونه کار می‌کند، صحبت کنیم.
+خوب است بدانیم، قسمت‌های مختلف یک کامپیوتر به زبان بسیار ساده، به این ترتیب هستند:</p>
+<p>تعاریف سطح بالای این قطعات به شرح زیر است:</p>
+<ul>
+<li><p>پردازنده مرکزی یا
+<span dir="ltr">Central Processing Unit (CPU)</span>:
+می‌تواند در هر ثانیه چندین کار را انجام دهد طوری که ما احساس کنیم کارها
+بطور موازی انجام می‌شوند.
+اینکه چه تعداد کار را در یک ثانیه انجام دهد، به سرعت پردازنده ما بستگی دارد.
+بطور مثال، اگر سرعت پردازنده ما 3.0 گیگاهرتز
+<span dir="ltr">(3.0 Gigahertz)</span>
+باشد، به معنی این است که به تعداد سه میلیارد کار در هر ثانیه، می‌تواند انجام دهد.</p></li>
+<li><p>حافظه اصلی یا
+<span dir="ltr">Main Memory</span>:
+برای ذخیره و دردسترس قرار دادن اطلاعات ضروری و مورد نیاز سریع پردازنده مرکزی،
+بکار می‌رود.
+اما باید مراقب اطلاعات خود در حافظه اصلی باشیم، چرا که با خاموش شدن کامپیوتر و یا
+راه‌اندازی مجدد
+(restart)
+اطلاعات آن از بین می‌رود.</p></li>
+<li><p>حافظه ثانویه یا
+(<span dir="ltr">Secondary Memory</span>):
+این نوع حافظه برای ذخیره دائمی اطلاعات بکارمی‌رود، اما سرعت آن از سرعت حافظه
+اصلی کمتر است.</p></li>
+<li><p>دستگاه‌های ورودی و خروجی یا
+<span dir="ltr">(Input and Output Devices)</span>:
+همان وسایلی هستند که به کمک آن‌ها با کامپیوتر ارتباط برقرار می‌کنیم، شامل
+صفحه کلید، مانیتور، ماوس و …</p></li>
+</ul>
+<p>و ما به عنوان یک برنامه‌نویس مسئول این هستیم که به
+CPU
+بگوئیم چه زمانی چه کاری انجام دهد و از کدام دستگاه‌های ورودی و خروجی استفاده کند.
+به این ترتیب، ما همه این منابع را باهم هماهنگ می‌سازیم.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="fruitful-functions-and-void-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="while-iteration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="why-learn-python.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="understanding-programming.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

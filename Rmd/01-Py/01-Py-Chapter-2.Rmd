@@ -1,8 +1,69 @@
-#بخش دوم:  متغیرها، عبارات و دستورات {#variables-expressions-commands}
-‌
+# متغیرها، عبارات و دستورات {#variables-expressions-commands}
 
-## عبارات بولی 
-([Boolean Expressions]{dir=ltr})
+## عبارات بولی {#boolean-expressions}
 
-عبارت بولی عبارتی است که یا درست یا نادرست است.
-عملگر  `==` برای بررسی درست یا نادرست بودن عبارت مورد استفاده قرار می‌گیرد. 
+عبارت بولی
+[(Boolean expressions)]{dir=ltr}
+عبارتی است که یا درست یا نادرست است. 
+عملگر`==` برای مقایسه دو عملوند بکار می‌رود و نتیجه آن درستی 
+[(`True`)]{dir=ltr}
+یا نادرستی 
+[(`False`)]{dir=ltr} 
+نتیجه این ارزیابی را نشان می‌دهد:
+
+```python
+5 == 5
+```
+```output
+True
+```
+
+```python
+5 == 6
+```
+```output
+False
+```
+
+عملگر
+`==`
+یکی از عملگرهای مقایسه‌ای است، سایر عملگرها عبارتند از:
+
+
+```python
+x != y        # x is not equal to y
+x > y         # x is greater than y
+x < y         # x is less than y
+x >= y        # x is greater than or equal to y
+x <= y        # x is less than or equal to y
+x is y        # x is the same as y
+x is not y    # x is not the same as y
+```
+
+## عملگرهای منطقی {#logical-operators}
+
+سه عملگر منطقی
+([Logical Operators]{dir=ltr})
+وجود دارد: 
+`and`, `or` 
+و 
+`not`
+. 
+برای مثال:
+
+```python
+x > 0 and x < 10
+```
+
+عملوندهای عملگرهای منطقی باید عبارات بولی باشند،
+اما در پایتون هر عدد غیر صفر 
+نیز به صورت 
+`True` 
+تفسیر می‌شود. 
+
+```python
+17 and True
+```
+```output
+True
+```

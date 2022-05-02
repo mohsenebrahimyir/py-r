@@ -1,70 +1,15 @@
-# بخش سوم: اجرای شرطی {#condition-statement}
-
-## عبارات بولی
-[(Boolean expressions)]{dir=ltr}
-
-عبارت بولی عبارتی است که یا درست یا نادرست است. 
-عملگر`==` برای مقایسه دو عملوند بکار می‌رود و نتیجه آن درستی 
-[(True)]{dir=ltr}
-یا نادرستی 
-[(False)]{dir=ltr} 
-نتیجه این ارزیابی را نشان می‌دهد:
-
-```
-> 5 == 5
-True
-
-> 5 == 6
-False
-```
-
-عملگر == یکی از عملگرهای مقایسه‌ای است، سایر عملگرها عبارتند از:
+# اجرای شرطی {#condition-statement}
 
 
-```
-x != y        # x is not equal to y
-x > y         # x is greater than y
-x < y         # x is less than y
-x >= y        # x is greater than or equal to y
-x <= y        # x is less than or equal to y
-x is y        # x is the same as y
-x is not y    # x is not the same as y
-```
-
-## عملگرهای منطقی 
-([Logical operators]{dir=ltr}) 
-
-سه عملگر منطقی وجود دارد: 
-`and`, `or` 
-و 
-`not`
-. 
-برای مثال:
-
-```
-x > 0 and x < 10
-```
-
-عملوندهای عملگرهای منطقی باید عبارات بولی باشند، اما در پایتون هر عدد غیر صفر 
-نیز به صورت 
-`True` 
-تفسیر می‌شود. 
-
-```
-> 17 and True
-True
-```
-
-## اجرای شرطی 
-([Conditional execution]{dir=ltr})
+## اجرای شرطی {#condition-execution}
 
 برای نوشتن یک برنامه کارآ، خیلی اوقات نیاز به بررسی شرایط مختلف داریم که 
 براساس آن‌ها رفتارهای متفاوتی را طراحی کنیم.
 با استفاده از جملات شرطی 
-([Conditional statements]{dir=ltr}) 
+([Conditional Statements]{dir=ltr}) 
 می‌توانیم این قابلیت را بدست آوریم. 
 
-```
+```python
 if x > 0 :
     print('x is positive')
 ```
@@ -74,36 +19,27 @@ if
 ، شرط یا 
 (condition) 
 نامیده می‌شود. 
-
-
-```r
-#knitr::include_graphics("./img/Figure 3.1-- If Logic.PNG")
-```
-
-
 اگر شرط منطقی درست باشد، دستور تورفتگی اجرا می‌شود. 
 اگر شرط منطقی نادرست باشد، عبارت تورفتگی نادیده گرفته می‌شود.
 
 
-## اجرای جایگزین 
-([Alternative execution]{dir=ltr}) 
+## اجرای جایگزین {#alternative-execution}
+ 
 
 شکل دوم یک عبارت 
 if 
-اجرای جایگزین است که در آن دو حالت ممکن توسط شرط بررسی می‌شود که کدامیک می‌بایست اجرا شوند:
+اجرای جایگزین 
+([Alternative Execution]{dir=ltr})
+است که در آن دو حالت ممکن توسط شرط بررسی می‌شود که کدامیک می‌بایست اجرا شوند:
 
 
-```
+```python
 if x%2 == 0 :
     print('x is even')
 else :
     print('x is odd')
 ```
 
-
-```r
-#knitr::include_graphics("./img/Figure 3.2 -- If-Then-Else Logic.PNG")
-```
 
 
 ز آنجایی که شرط باید درست یا نادرست باشد، دقیقاً یکی از گزینه‌ها اجرا می‌شود.
@@ -112,34 +48,33 @@ else :
 نامیده می‌شوند، زیرا آنها شاخه‌هایی در جریان اجرا هستند.
 
 
-## شرط‌های زنجیره‌ای 
-([Chained conditionals]{dir=ltr}) 
+## شرط‌های زنجیره‌ای {#chained-conditionals}
 
-یکی از راه‌های بررسی بیش از سه شرط این است که:
 
-```
+یکی از راه‌های بررسی بیش از سه شرط این است که
+با استفاده از 
+`elif`
+از شرط‌های زنجیری
+([Chained Conditionals]{dir=ltr}) 
+استفاده کنیم:
+
+```python
 if x < y:
-  print('x is less than y')
+    print('x is less than y')
 elif x > y:
-  print('x is greater than y')
+    print('x is greater than y')
 else:
-  print('x and y are equal')
+    print('x and y are equal')
 ```
 
 
-```r
-#knitr::include_graphics("./img/Figure 3.3 -- If-Then-ElseIf Logic.PNG")
-```
+## شرط‌های تو در تو {#nested-conditionals}
 
+یک عبارت شرطی نیز می‌تواند درون عبارت شرطی دیگری قرار گیرد و ساختار شرط‌های تو در تو
+([Nested Conditionals]{dir=ltr}) 
+را ایجاد کنند:
 
-## شرط‌های تو در تو 
-([Nested conditionals]{dir=ltr}) 
-
-
-یک عبارت شرطی 
-نیز می‌تواند درون  عبارن شرطی دیگری قرار گیرد:
-
-```
+```python
 if x == y:
     print('x and y are equal')
 else:
@@ -150,15 +85,7 @@ else:
 ```
 
 
-```r
-#knitr::include_graphics("./img/Figure 3.4 -- Nested If Statements.PNG")
-```
-
-
-## جلوگیری از استثناها با استفاده از 
-`try` 
-و 
-`except`
+## استفاده از `try` و `except` {#try-except-statement}
 
 
 برخی اوقات در جریان برنامه‌نویسی شرطی، نیاز داریم که به مفسر پایتون بگوئیم 
@@ -175,7 +102,7 @@ else:
 می‌تواند کمک‌کننده باشد:
 
 
-```
+```python
 inp = input('Enter Fahrenheit Temperature:')
 try:
     fahr = float(inp)

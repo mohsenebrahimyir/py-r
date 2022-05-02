@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>فصل 5 تکرار | پایتون و آر</title>
-  <meta name="description" content="فصل 5 تکرار | پایتون و آر" />
+  <title>2.1 عبارات بولی | پایتون و آر</title>
+  <meta name="description" content="2.1 عبارات بولی | پایتون و آر" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta property="og:title" content="2.1 عبارات بولی | پایتون و آر" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://mohsenebrahimyir.github.io/py-r/" />
   <meta property="og:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta name="twitter:title" content="2.1 عبارات بولی | پایتون و آر" />
   
   
   <meta name="twitter:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="fruitful-functions-and-void-functions.html"/>
-<link rel="next" href="while-iteration.html"/>
+<link rel="prev" href="variables-expressions-commands.html"/>
+<link rel="next" href="logical-operators.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -269,22 +269,38 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="iteration" class="section level1" number="5">
-<h1><span class="header-section-number">فصل 5</span> تکرار</h1>
-<p>برای جلوگیری از دویاره نویسی در برنامه‌ها از
-ساختار حلقه
-(<span dir="ltr">Loop</span>)
-یا تکرار
-(<span dir="ltr">Iteration</span>)
-می‌وان استفاده کرد.</p>
+<div id="boolean-expressions" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> عبارات بولی</h2>
+<p>عبارت بولی
+<span dir="ltr">(Boolean expressions)</span>
+عبارتی است که یا درست یا نادرست است.
+عملگر<code>==</code> برای مقایسه دو عملوند بکار می‌رود و نتیجه آن درستی
+<span dir="ltr">(<code>True</code>)</span>
+یا نادرستی
+<span dir="ltr">(<code>False</code>)</span>
+نتیجه این ارزیابی را نشان می‌دهد:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="boolean-expressions.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="op">==</span> <span class="dv">5</span></span></code></pre></div>
+<pre class="output"><code>True</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="boolean-expressions.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="op">==</span> <span class="dv">6</span></span></code></pre></div>
+<pre class="output"><code>False</code></pre>
+<p>عملگر
+<code>==</code>
+یکی از عملگرهای مقایسه‌ای است، سایر عملگرها عبارتند از:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="boolean-expressions.html#cb10-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">!=</span> y        <span class="co"># x is not equal to y</span></span>
+<span id="cb10-2"><a href="boolean-expressions.html#cb10-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">&gt;</span> y         <span class="co"># x is greater than y</span></span>
+<span id="cb10-3"><a href="boolean-expressions.html#cb10-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">&lt;</span> y         <span class="co"># x is less than y</span></span>
+<span id="cb10-4"><a href="boolean-expressions.html#cb10-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">&gt;=</span> y        <span class="co"># x is greater than or equal to y</span></span>
+<span id="cb10-5"><a href="boolean-expressions.html#cb10-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">&lt;=</span> y        <span class="co"># x is less than or equal to y</span></span>
+<span id="cb10-6"><a href="boolean-expressions.html#cb10-6" aria-hidden="true" tabindex="-1"></a>x <span class="kw">is</span> y        <span class="co"># x is the same as y</span></span>
+<span id="cb10-7"><a href="boolean-expressions.html#cb10-7" aria-hidden="true" tabindex="-1"></a>x <span class="kw">is</span> <span class="kw">not</span> y    <span class="co"># x is not the same as y</span></span></code></pre></div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="fruitful-functions-and-void-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="while-iteration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="variables-expressions-commands.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="logical-operators.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

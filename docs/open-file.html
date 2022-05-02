@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>فصل 5 تکرار | پایتون و آر</title>
-  <meta name="description" content="فصل 5 تکرار | پایتون و آر" />
+  <title>7.1 بازکردن فایل | پایتون و آر</title>
+  <meta name="description" content="7.1 بازکردن فایل | پایتون و آر" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta property="og:title" content="7.1 بازکردن فایل | پایتون و آر" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://mohsenebrahimyir.github.io/py-r/" />
   <meta property="og:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta name="twitter:title" content="7.1 بازکردن فایل | پایتون و آر" />
   
   
   <meta name="twitter:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="fruitful-functions-and-void-functions.html"/>
-<link rel="next" href="while-iteration.html"/>
+<link rel="prev" href="files.html"/>
+<link rel="next" href="read-file.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -269,22 +269,40 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="iteration" class="section level1" number="5">
-<h1><span class="header-section-number">فصل 5</span> تکرار</h1>
-<p>برای جلوگیری از دویاره نویسی در برنامه‌ها از
-ساختار حلقه
-(<span dir="ltr">Loop</span>)
-یا تکرار
-(<span dir="ltr">Iteration</span>)
-می‌وان استفاده کرد.</p>
+<div id="open-file" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> بازکردن فایل</h2>
+<p>ممکن است داده‌های ما از قبل در فایلی موجود باشد
+(<a href="./data/mbox.txt">دانلود فایل</a>)
+، در اینصورت باید بتوانیم آن را
+باز کنیم:</p>
+<div class="sourceCode" id="cb77"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb77-1"><a href="open-file.html#cb77-1" aria-hidden="true" tabindex="-1"></a>fhand <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;mbox.txt&#39;</span>)</span>
+<span id="cb77-2"><a href="open-file.html#cb77-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(fhand)</span></code></pre></div>
+<pre class="output"><code>&lt;_io.TextIOWrapper name=&#39;mbox.txt&#39; mode=&#39;r&#39; encoding=&#39;UTF-8&#39;&gt;</code></pre>
+<p>اگر باز کردن موفقیت‌آمیز باشد، سیستم‌عامل یک
+<span dir="ltr"><code>handle</code></span>
+برای فایل به ما برمی‌گرداند.
+<span dir="ltr"><code>handle</code></span>،
+داده‌های واقعی موجود در فایل نیست، اما در عوض یک
+<span dir="ltr"><code>handle</code></span>
+است که می‌توانیم برای خواندن داده‌ها از آن استفاده کنیم.
+اگر فایل درخواستی وجود داشته باشد و مجوزهای لازم برای
+خواندن فایل را داشته باشیم، به ما یک
+<span dir="ltr"><code>handle</code></span>
+داده می شود.</p>
+<p>اما چنانچه فایل وجود نداشته باشد، اجرای این دستور ناموفق خواهد بود و
+<span dir="ltr"><code>handle</code></span>
+نخواهیم داشت:</p>
+<pre class="output"><code>Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+FileNotFoundError: [Errno 2] No such file or directory: &#39;mbox.txt&#39;</code></pre>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="fruitful-functions-and-void-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="while-iteration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="files.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="read-file.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

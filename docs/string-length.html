@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>فصل 5 تکرار | پایتون و آر</title>
-  <meta name="description" content="فصل 5 تکرار | پایتون و آر" />
+  <title>6.1 محاسبه طول متن | پایتون و آر</title>
+  <meta name="description" content="6.1 محاسبه طول متن | پایتون و آر" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta property="og:title" content="6.1 محاسبه طول متن | پایتون و آر" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://mohsenebrahimyir.github.io/py-r/" />
   <meta property="og:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta name="twitter:title" content="6.1 محاسبه طول متن | پایتون و آر" />
   
   
   <meta name="twitter:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="fruitful-functions-and-void-functions.html"/>
-<link rel="next" href="while-iteration.html"/>
+<link rel="prev" href="string.html"/>
+<link rel="next" href="immutable-string.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -269,22 +269,30 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="iteration" class="section level1" number="5">
-<h1><span class="header-section-number">فصل 5</span> تکرار</h1>
-<p>برای جلوگیری از دویاره نویسی در برنامه‌ها از
-ساختار حلقه
-(<span dir="ltr">Loop</span>)
-یا تکرار
-(<span dir="ltr">Iteration</span>)
-می‌وان استفاده کرد.</p>
+<div id="string-length" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> محاسبه طول متن</h2>
+<p><span dir="ltr"><code>len</code></span>
+یک تابع داخلی در پایتون است که تعداد کاراکترهای یک رشته را برمی‌گرداند.</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="string-length.html#cb54-1" aria-hidden="true" tabindex="-1"></a>fruit <span class="op">=</span> <span class="st">&#39;banana&#39;</span></span>
+<span id="cb54-2"><a href="string-length.html#cb54-2" aria-hidden="true" tabindex="-1"></a>length <span class="op">=</span> <span class="bu">len</span>(fruit)</span></code></pre></div>
+<p>حال اگر این عدد را به عنوان اندیس متغیر رشته استفاده کنیم، آخرین کاراکتر رشته را
+بدست می‌آوریم:</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="string-length.html#cb55-1" aria-hidden="true" tabindex="-1"></a>last <span class="op">=</span> fruit[length <span class="op">-</span> <span class="dv">1</span>]</span>
+<span id="cb55-2"><a href="string-length.html#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(last)</span></code></pre></div>
+<pre class="output"><code>a</code></pre>
+<p>دلیل این تفریق این است که شماره اندیس اولین کاراکتر رشته، با صفر شروع می‌شود.</p>
+<p>بنابراین برای دستیابی به موقعیت‌های دیگر یک رشته، می‌توان اندیس‌ها را تغییر داد:</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="string-length.html#cb57-1" aria-hidden="true" tabindex="-1"></a>fruit <span class="op">=</span> <span class="st">&#39;banana&#39;</span></span>
+<span id="cb57-2"><a href="string-length.html#cb57-2" aria-hidden="true" tabindex="-1"></a>fruit[:<span class="dv">3</span>]</span></code></pre></div>
+<pre class="output"><code>ana</code></pre>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="fruitful-functions-and-void-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="while-iteration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="string.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="immutable-string.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

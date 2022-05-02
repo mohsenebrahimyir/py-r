@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>فصل 5 تکرار | پایتون و آر</title>
-  <meta name="description" content="فصل 5 تکرار | پایتون و آر" />
+  <title>7.3 جستجو در فایل | پایتون و آر</title>
+  <meta name="description" content="7.3 جستجو در فایل | پایتون و آر" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta property="og:title" content="7.3 جستجو در فایل | پایتون و آر" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://mohsenebrahimyir.github.io/py-r/" />
   <meta property="og:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta name="twitter:title" content="7.3 جستجو در فایل | پایتون و آر" />
   
   
   <meta name="twitter:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="fruitful-functions-and-void-functions.html"/>
-<link rel="next" href="while-iteration.html"/>
+<link rel="prev" href="read-file.html"/>
+<link rel="next" href="select-file.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -269,22 +269,31 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="iteration" class="section level1" number="5">
-<h1><span class="header-section-number">فصل 5</span> تکرار</h1>
-<p>برای جلوگیری از دویاره نویسی در برنامه‌ها از
-ساختار حلقه
-(<span dir="ltr">Loop</span>)
-یا تکرار
-(<span dir="ltr">Iteration</span>)
-می‌وان استفاده کرد.</p>
+<div id="search-in-file" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> جستجو در فایل</h2>
+<p>اگر در فایل محتویات داده به دنبال کلمه و یا داده خاصی هستیم، می‌توانیم آن را
+در فایلی که از قبل آن را باز کرده و خوانده‌ایم، جستجو کنیم:</p>
+<div class="sourceCode" id="cb86"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb86-1"><a href="search-in-file.html#cb86-1" aria-hidden="true" tabindex="-1"></a>fhand <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;mbox.txt&#39;</span>)</span>
+<span id="cb86-2"><a href="search-in-file.html#cb86-2" aria-hidden="true" tabindex="-1"></a>count <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb86-3"><a href="search-in-file.html#cb86-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> fhand:</span>
+<span id="cb86-4"><a href="search-in-file.html#cb86-4" aria-hidden="true" tabindex="-1"></a>    line <span class="op">=</span> line.rstrip()</span>
+<span id="cb86-5"><a href="search-in-file.html#cb86-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> line.startswith(<span class="st">&#39;From:&#39;</span>):</span>
+<span id="cb86-6"><a href="search-in-file.html#cb86-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(line)</span></code></pre></div>
+<pre class="output"><code>From: stephen.marquard@uct.ac.za</code></pre>
+<p>در این مثال، ما به دنبال کلمه
+<span dir="ltr"><code>'From'</code></span>
+هستیم.</p>
+<p>ما با استفاده از تابع
+<span dir="ltr"><code>rstrip()</code></span>
+فضای خالی را در سمت راست رشته موجود در فایل، حذف کرده‌ایم.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="fruitful-functions-and-void-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="while-iteration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="read-file.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="select-file.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

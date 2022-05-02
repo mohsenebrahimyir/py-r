@@ -1,6 +1,6 @@
-# بخش چهارم: توابع {#functions}
+# توابع {#functions}
 
-## فراخوانی تابع
+## فراخوانی تابع {#import-function}
 
 در حوزه برنامه‌نویسی،
 یک تابع دنباله‌ای از جملات است که یک محاسبات را انجام می‌دهد.
@@ -12,7 +12,7 @@
 ```python
 type(32)
 ```
-```
+```output
 <class 'int'>
 ```
 
@@ -21,10 +21,10 @@ type(32)
 [`type`]{dir=ltr}
 است.
 
-## توابع داخلی^[
-[Built-in functions]{dir=ltr}
-]
+## توابع داخلی {#built-in-functions}
 
+توابع داخلی 
+[(Built-in)]{dir=ltr}
 این‌ها توابعی هستند که توسط سازندگان پایتون تعبیه شده‌اند
  و برای حل مسائل عمومی مورد استفاده قرار می‌گیرند.
 
@@ -33,61 +33,58 @@ type(32)
 ```python
 max('Hello world')
 ```
-```
+```output
 'w'
 ```
 
 ```python
 min('Hello world')
 ```
-```
+```output
 ' '
 ```
 
 ```python
 len('Hello world')
 ```
-```
+```output
 11
 ```
 
-## توابع تبدیل نوع^[
-[Type conversion functions]{dir=ltr}
-]
+## توابع تبدیل نوع {#type-conversion-functions}
 
+توابع تبدیل نوع 
+[(Type Conversion)]{dir=ltr}
 این‌ها نوع دیگری از توابع داخلی هستند که مقدار یک نوع را
 به نوعی دیگر تبدیل می‌کنند:
 
 ```python
 int(3.99999)
 ```
-```
+```output
 3
 ```
 
 ```python
 int(-2.3)
 ```
-```
+```output
 -3
 ```
 
 ```python
 float('3.14159')
 ```
-```
+```output
 3.14159
 ```
 
-## توابع ریاضی^[
-[Math functions]{dir=ltr}
-]
+## توابع ریاضی {#math-functions}
 
 پایتون دارای یک ماژول ریاضی است که اکثر توابع ریاضی 
 مشهور را ارائه می‌دهد. اما قبل از اینکه بتوانیم از ماژول
-استفاده کنیم، باید آن را وارد^[
-[`import`]{dir=ltr}
-]
+استفاده کنیم، باید آن را وارد
+[(`import`)]{dir=ltr}
 کنیم:
 
 ```python
@@ -110,14 +107,14 @@ radians = 0.7
 height = math.sin(radians)
 ```
 
-## اعداد تصادفی^[
-[Random numbers]{dir=ltr}
-]
+## اعداد تصادفی {#random-numbers}
 
 به نظر می‌رسد که ساختن یک برنامه واقعاً غیر قطعی
 چندان آسان نیست، اما راه‌هایی وجود دارد که حداقل 
 غیرقطعی به نظر برسد. یکی از آنها استفاده از 
-الگوریتم‌هایی است که اعداد شبه تصادفی تولید می‌کنند. 
+الگوریتم‌هایی است که اعداد شبه تصادفی
+[(Random)]{dir=ltr}
+تولید می‌کنند. 
 درست است که اعداد شبه تصادفی واقعاْ تصادفی نیستند 
 اما بازهم تمایز آن‌ها از اعداد تصادفیُ غیرممکن است. 
 
@@ -131,11 +128,11 @@ height = math.sin(radians)
 import random
 
 for i in range(10):
-  x = random.random()
-  print(x)
+    x = random.random()
+    print(x)
 
 ```
-```
+```output
 0.0920530236235576
 0.6250171315179012
 0.7706549349232131
@@ -164,7 +161,7 @@ for i in range(10):
 ```python
 random.randint(5, 10)
 ```
-```
+```output
 7
 ```
 
@@ -172,11 +169,11 @@ random.randint(5, 10)
 t = [1, 2, 3]
 random.choice(t)
 ```
-```
+```output
 3
 ```
 
-## افزودن یک تابع جدید
+## افزودن یک تابع جدید {#create-new-function}
 
 ما معمولاْ برای پیشبرد اهداف برنامه موردنظرمان،
 نیاز به تعریف توابع جدید خواهیم داشت. این توابع
@@ -188,8 +185,8 @@ random.choice(t)
 
 ```python
 def print_lyrics():
-  print("I'm a lumberjack, and I'm okay.")
-  print('I sleep all night and I work all day.')
+    print("I'm a lumberjack, and I'm okay.")
+    print('I sleep all night and I work all day.')
 
 ```
 
@@ -202,7 +199,7 @@ def print_lyrics():
 ```python
 print_lyrics()
 ```
-```
+```output
 I'm a lumberjack, and I'm okay.
 I sleep all night and I work all day.
 ```
@@ -210,27 +207,25 @@ I sleep all night and I work all day.
 ما حتی می‌توانیم یک تابع تعریف شده را درون تابع دیگر، 
 فراخوانی کنیم.
 
-## پارامترها و آرگومان‌ها
+## پارامترها و آرگومان‌ها {#parameters-and-arguments}
 
 برخی از توابع داخلی که دیده‌ایم به آرگومان نیاز دارند. 
 برای مثال، وقتی تابع 
 [`math.sin`]{dir=ltr}
 را فراخوانی می‌کنیم، باید یک عدد را به آن بدهیم.
-به این ورودی، آرگومان^[
-[argument]{dir=ltr}
-]
+به این ورودی، آرگومان
+[(Argument)]{dir=ltr}
+
 گفته می‌شود.
 
-## توابع دارای خروجی و توابع بدون خروجی^[
-[Fruitful functions and Void functions]{dir=ltr}
-]
-
+## توابع دارای خروجی و توابع بدون خروجی {#fruitful-functions-and-void-functions}
 
 در اجرای برخی توابع، با اتمام آخرین دستور تابع،
-مقداری را به عنوان نتیجه^[
-[Fruitful functions]{dir=ltr}
-]
+مقداری را به عنوان نتیجه
  در خروجی می‌بینیم.
+این توابع را
+[Fruitful]{dir=ltr}
+می‌نامند:
 
 ```python
 import math
@@ -246,11 +241,11 @@ math.sqrt(5)
 درواقع این توابع کاری را انجام 
 داده‌اند که بصورت خروجی قابل نمایش نیست. 
 این توابع را 
-[void function]{dir=ltr}
+[Void]{dir=ltr}
 می‌نامند:
 
 ```python
 def No_reult_func ():
-  x = math.cos(radians)
+    x = math.cos(radians)
 
 ```

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>فصل 5 تکرار | پایتون و آر</title>
-  <meta name="description" content="فصل 5 تکرار | پایتون و آر" />
+  <title>6.3 عملگر in | پایتون و آر</title>
+  <meta name="description" content="6.3 عملگر in | پایتون و آر" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta property="og:title" content="6.3 عملگر in | پایتون و آر" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://mohsenebrahimyir.github.io/py-r/" />
   <meta property="og:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="فصل 5 تکرار | پایتون و آر" />
+  <meta name="twitter:title" content="6.3 عملگر in | پایتون و آر" />
   
   
   <meta name="twitter:image" content="https://mohsenebrahimyir.github.io/py-r/./img/cover.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="fruitful-functions-and-void-functions.html"/>
-<link rel="next" href="while-iteration.html"/>
+<link rel="prev" href="immutable-string.html"/>
+<link rel="next" href="string-methods.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -269,22 +269,31 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="iteration" class="section level1" number="5">
-<h1><span class="header-section-number">فصل 5</span> تکرار</h1>
-<p>برای جلوگیری از دویاره نویسی در برنامه‌ها از
-ساختار حلقه
-(<span dir="ltr">Loop</span>)
-یا تکرار
-(<span dir="ltr">Iteration</span>)
-می‌وان استفاده کرد.</p>
+<div id="in-operation" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> عملگر <span dir="ltr"><code>in</code></span></h2>
+<p>گاربرد این عملگر زمانی است که می‌خواهیم بدانیم آیا یک رشته حاوی یک رشته و یا کاراکتر خاصی هست یا خیر:</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb60-1"><a href="in-operation.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;a&#39;</span> <span class="kw">in</span> <span class="st">&#39;banana&#39;</span></span></code></pre></div>
+<p>و یا این حالت:</p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="in-operation.html#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;seed&#39;</span> <span class="kw">in</span> <span class="st">&#39;banana&#39;</span></span></code></pre></div>
+<p>همچنین با استفاده از عملگرهای
+<span dir="ltr"><code>&lt;</code></span>
+و
+<span dir="ltr"><code>&gt;</code></span>
+می‌توانیم رشته‌ها را از نظر ترتیب حروف الفبا با یکدیگر مقایسه کنیم:</p>
+<div class="sourceCode" id="cb62"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb62-1"><a href="in-operation.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> word <span class="op">&lt;</span> <span class="st">&#39;banana&#39;</span>:</span>
+<span id="cb62-2"><a href="in-operation.html#cb62-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&#39;Your word,&#39;</span> <span class="op">+</span> word <span class="op">+</span> <span class="st">&#39;, comes before banana.&#39;</span>)</span>
+<span id="cb62-3"><a href="in-operation.html#cb62-3" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> word <span class="op">&gt;</span> <span class="st">&#39;banana&#39;</span>:</span>
+<span id="cb62-4"><a href="in-operation.html#cb62-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&#39;Your word,&#39;</span> <span class="op">+</span> word <span class="op">+</span> <span class="st">&#39;, comes after banana.&#39;</span>)</span>
+<span id="cb62-5"><a href="in-operation.html#cb62-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb62-6"><a href="in-operation.html#cb62-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&#39;All right, bananas.&#39;</span>)</span></code></pre></div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="fruitful-functions-and-void-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="while-iteration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="immutable-string.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="string-methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
