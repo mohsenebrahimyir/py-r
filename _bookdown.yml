@@ -1,7 +1,7 @@
 book_filename: "py-r"
 delete_merged_file: true
 output_dir: "docs"
-rmd_subdir: ["Rmd/pre", "Rmd/Py", "Rmd/R", "Rmd/post"]
+rmd_subdir: ["Rmd/00-pre", "Rmd/01-Py", "Rmd/02-R", "Rmd/99-post"]
 language:
   label:
     toc: "فهرست"

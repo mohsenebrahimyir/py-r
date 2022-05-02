@@ -1,10 +1,10 @@
-# بخش پنجم: تکرار ([Iteration]{dir=ltr}) {#Iteration}
+# بخش پنجم: تکرار ([Iteration]{dir=ltr}) {#iteration}
 
 
-## عبارت ['While']{dir=ltr}
+## عبارت [`While`]{dir=ltr}
 
 برای شروع آشنایی با عبارت و در حقیقت ساختار 
-['While']{dir=ltr} 
+[`while`]{dir=ltr} 
 به مثال زیر توجه کنید:
 
 
