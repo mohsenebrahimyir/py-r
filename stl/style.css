@@ -1,6 +1,5 @@
-@import url(../../fonts/fonts.css); /* لینک فایلی که وظیفه بارگذاری فونت ها را برعهده دارد */
 body {
-	font-family: "IRANSans(FaNum)", IRANSans, Roboto, Arial !important;
+	font-family: 'Vazirmatn', Roboto !important;
 	font-weight: 300;
 	direction: rtl;
 	background-color: #ffffff;
@@ -8,7 +7,7 @@ body {
 	margin: 0;
 }
 h1, h2, h3, h4, h5, h6,input, textarea {
-	font-family: "IRANSans(FaNum)", IRANSans, Roboto, Arial !important;
+	font-family:  'Vazirmatn', Roboto !important;
 }
 h1 {
 	font-weight: bold;
@@ -242,7 +241,7 @@ caption, p.caption {
 
 /* .book summary ------------------------------------------------*/
 .book .book-header, .book .book-summary {
-    font-family: "IRANSans(FaNum)", IRANSans, Roboto, Arial, sans-serif;
+    font-family: 'Vazirmatn', Roboto !important;
     direction: rtl;
 }
 
@@ -251,17 +250,17 @@ caption, p.caption {
 }
 
 .book.font-family-1 {
-    font-family: "IRANSans(FaNum)", IRANSans, Roboto, Arial, sans-serif;
+    font-family: 'Vazirmatn', Roboto !important;
     direction: rtl;
 }
 
 .book.font-family-2 {
-    font-family: "IRANSans(FaNum)", IRANSans, Roboto, Arial, sans-serif;
+    font-family: 'Vazirmatn', Roboto !important;
     direction: rtl;
 }
 
 .lightable-classic caption {
-    font-family: "IRANSans(FaNum)", IRANSans, Roboto, Arial, sans-serif;
+    font-family: 'Vazirmatn', Roboto !important;
     
 }
 
