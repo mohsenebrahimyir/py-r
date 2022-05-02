@@ -18,7 +18,7 @@ favicon:
 cover-image: 
   - "./img/cover.jpg"
 site: bookdown::bookdown_site
-url: https://mohsenebrahimy.ir/book/py-r/
+url: https://mohsenebrahimyir.github.io/py-r/
 classoption: openany
 bibliography: 
   - bib/book.bib
@@ -41,10 +41,6 @@ knitr::opts_chunk$set(
 ## import source
 source("R/library.R")
 source("R/function.R")
-
-## create necessary directory
-dir.create("img")
-dir.create("data")
 ```
 
 پیش گفتار {-}
@@ -62,14 +58,12 @@ mohsenebrahimy.ir@gmail.com
 بروزرسانی شده است.
 
 ::: {align="center"} :::
-[<https://mohsenebrahimy.ir/book/py-r/>]{dir=ltr}
+[<https://mohsenebrahimyir.github.io/py-r/>]{dir=ltr}
 ::::::
 
 امیدوارم این کتاب برایتان مفید باشد.
 
 ::: {align="center"} :::
-**محسن ابراهیمی**
-
-**www.mohsenebrahimy.ir**
+**نویسندگان کتاب**
 ::::::
 
