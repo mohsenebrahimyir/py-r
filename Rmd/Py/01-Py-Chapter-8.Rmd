@@ -6,7 +6,7 @@
 یکی از راه‌های ایجاد لیست، بکاربردن براکت در تعریف آن است:
 
 
-```{python}
+```python
 cheeses = ['Cheddar', 'Edam', 'Gouda']
 numbers = [17, 123]
 empty = []
@@ -16,19 +16,19 @@ print(cheeses, numbers, empty)
 اما همانطور که گفته بودیم، عناصر لیست می‌توانند نوع‌های متفاوت از هم داشته باشند:
 
 
-```{python}
+```python
 multi_types_items = ['spam', 2.0, 5, [10, 20]]
 ```
 
 در دو مثال قبلی؛ تعداد عناصر لیست را به این شکل محاسبه می‌کنیم:
 
 لیست 
-['cheeses']{dir=ltr} 
+[`cheeses`]{dir=ltr} 
 دارای 3 عنصر است. 
 لیست 
-['numbers']{dir=ltr} 
+[`numbers`]{dir=ltr} 
 دو عنصر دارد و لیست 
-['multi_types_items']{dir=ltr} 
+[`multi_types_items`]{dir=ltr} 
 شامل 4 عنصر می‌شود. چراکه لیست داخلی که شامل عناصر 10 و 20 هست، در لیست اصلی، 
 به عنوان یک عنصر و یا داده درنظرگرفته می‌شود. 
 
@@ -36,7 +36,7 @@ multi_types_items = ['spam', 2.0, 5, [10, 20]]
 به این منظور از اندیس برای آدرس‌دهی استفاده می‌کنیم:
 
 
-```{python}
+```python
 numbers = [17, 123]
 numbers[1] = 5
 print(numbers)
@@ -46,7 +46,7 @@ print(numbers)
 این روش استفاده کرد:
 
 
-```{python}
+```python
 cheeses = ['Cheddar', 'Edam', 'Gouda']
 'Edam' in cheeses
 ```
@@ -54,7 +54,7 @@ cheeses = ['Cheddar', 'Edam', 'Gouda']
  و یا:
  
  
-```{python}
+```python
 cheeses = ['Cheddar', 'Edam', 'Gouda']
 'Brie' in cheeses
 ```
@@ -66,7 +66,7 @@ cheeses = ['Cheddar', 'Edam', 'Gouda']
 محاسبه‌ای و یا هرنوع عملیات دیگر، وارد سازیم، در اینصورت:
 
 
-```{python}
+```python
 for cheese in cheeses:
   print(cheese)
 ```
@@ -75,7 +75,7 @@ for cheese in cheeses:
 خروجی چاپ کردیم. اما اگر نیاز داشته باشیم که در حین پیمایش، داده‌ای از لیست را
 تغییر دهیم، چه روشی را باید درپیش بگیریم؟
 
-```{python}
+```python
 for i in range(len(numbers)):
   numbers[i] = numbers[i] * 2
 ```
@@ -89,7 +89,7 @@ for i in range(len(numbers)):
 آشنا می‌شویم و سپس نحوه برش‌های مختلف لیست را یادمی‌گیریم:
 
 
-```{python}
+```python
 a = [1, 2, 3]
 b = [4, 5, 6]
 c = a + b
@@ -97,23 +97,23 @@ print(c)
 ```
 
 
-```{python}
+```python
 [1, 2, 3] * 3
 ```
 
 
-```{python}
+```python
 t = ['a', 'b', 'c', 'd', 'e', 'f']
 t[1:3]
 ```
 
 
-```{python}
+```python
 t[:4]
 ```
 
 
-```{python}
+```python
 t[3:]
 ```
 
@@ -123,7 +123,7 @@ t[3:]
 ['append()']{dir=ltr} 
 استفاده کنیم:
 
-```{python}
+```python
 t = ['a', 'b', 'c']
 t.append('d')
 print(t)
@@ -134,7 +134,7 @@ print(t)
 یک لیست را به عنوان آرگومان ورودی دریافت می‌کند و آن را به انتهای لیست معرفی شده، 
 اضافه می‌کند:
 
-```{python}
+```python
 t1 = ['a', 'b', 'c']
 t2 = ['d', 'e']
 t1.extend(t2)
@@ -145,7 +145,7 @@ print(t1)
 ['sort()']{dir=ltr} 
 در اختیار ماست: 
 
-```{python}
+```python
 t = ['d', 'c', 'e', 'b', 'a']
 t.sort()
 print(t)
@@ -157,13 +157,13 @@ print(t)
 ['pop(i)']{dir=ltr} 
 استفاده کنیم: 
 
-```{python}
+```python
 t = ['a', 'b', 'c']
 x = t.pop(1)
 print(t)
 ```
 
-```{pyhon}
+```pyhon
 print(x)
 ```
 
@@ -173,34 +173,34 @@ print(x)
 
 به کد زیر و نتیجه اجرای آن دقت کنید: 
 
-```{python}
+```python
 t = ['a', 'b', 'c']
 del t[1]
 print(t)
 ```
 
 به نظر شما تفاوت استفاده از متدهای 
-['pop(i)']{dir=ltr} 
+[`pop(i)`]{dir=ltr} 
 و 
-['del list_name[i]']{dir=ltr} 
+[`del list_name[i]`]{dir=ltr} 
 در چیست؟ 
 
 بله، درست است که هر دو باعث حذف یک عنصر از لیست می‌شوند اما در استفاده از متد 
-['pop(i)']{dir=ltr} 
+[`pop(i)`]{dir=ltr} 
 عنصر حذف شده در اختیار ما خواهد بود. به این معنی که خروجی این متد، نمایانگر 
 مقدار عنصر حذف شده است. اما در استفاده از دستور 
-['del list_name[i]']{dir=ltr} 
+[`del list_name[i]`]{dir=ltr} 
 عنصری که حذف شده دیگر در دسترس ما نخواهد بود. 
 
 حال به این سوال فکر کنید که اگر اندیس عنصر موردنظر برای حذف کردن را ندانیم، 
 از چه روشی می‌توانیم آن عنصر خاص را حذف کنیم؟ 
 درواقع پایتون برای این منظور متد 
-['remove(item_value)']{dir=ltr} 
+[`remove(item_value)`]{dir=ltr} 
 را پیشنهاد می‌دهد که با ارسال مقدار عنصر موردنظر به عنوان آرگومان ورودی به این 
 متد، می‌توانیم آن را از لیست حذف کنیم: 
 
 
-```{python}
+```python
 t = ['a', 'b', 'c']
 t.remove('b')
 print(t)
@@ -209,7 +209,7 @@ print(t)
 و یا برای حذف بیش از یک مقدار، با دانستن اندیس آن‌ها می‌توان از روش زیر استفاده 
 کرد: 
 
-```{python}
+```python
 t = ['a', 'b', 'c', 'd', 'e', 'f']
 del t[1:5]
 print(t)
@@ -220,27 +220,27 @@ print(t)
 
 در کدهای زیر نام و کاربرد برخی توابع مهم برای استفاده در لیست‌ها معرفی شده‌اند: 
 
-```{python}
+```python
 nums = [3, 41, 12, 9, 74, 15]
 print(len(nums))
 ```
 
-```{python}
+```python
 print(max(nums))
 ```
 
 
-```{python}
+```python
 print(min(nums))
 ```
 
 
-```{python}
+```python
 print(sum(nums))
 ```
 
 
-```{python}
+```python
 print(sum(nums)/len(nums))
 ```
 
@@ -251,10 +251,10 @@ print(sum(nums)/len(nums))
 یک رشته، دنباله‌ای از کاراکترهاست و یک لیست دنباله‌ای از عناصر. 
 اما یک لیست از کاراکترها، همانند یک رشته نیست. برای تبدیل یک رشته به یک لیست، 
 می‌توان از متد یا تابع 
-['list(string_name']{dir=ltr} 
+[`list(string_name)`]{dir=ltr} 
 استفاده کرد:
 
-```{python}
+```python
 s = 'spam'
 t = list(s)
 print(t)
@@ -264,26 +264,26 @@ print(t)
 اما اگر بخواهیم رشته‌ای از کلمات را به لیست تبدیل کنیم، چه باید کرد:
 
 
-```{python}
+```python
 s = 'pining for the fjords'
 t = s.split()
 print(t)
 ```
 
 و یا مثالی دیگر که در آن با کاربرد توابع 
-['split(delimiter)']{dir=ltr} و
-['join(list_name)']{dir=ltr} 
-آشنا می‌شویم: 
+[`split(delimiter)`]{dir=ltr} و
+[`join(list_name)`]{dir=ltr} 
+آشنا می‌شویم:
 
 
-```{python}
+```python
 s = 'spam-spam-spam'
 delimiter = '-'
 s.split(delimiter)
 ```
 
 
-```{python}
+```python
 t = ['pining', 'for', 'the', 'fjords']
 delimiter = ' '
 delimiter.join(t)

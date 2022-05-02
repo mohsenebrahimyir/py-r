@@ -6,7 +6,7 @@
 ممکن است داده‌های ما از قبل در فایلی موجود باشد، دراینصورت باید بتوانیم آن را 
 باز کنیم:
 
-```{python}
+```python
 fhand = open('./ref/mbox.txt')
 print(fhand)
 ```
@@ -32,21 +32,21 @@ print(fhand)
 ['handle']{dir=ltr}
 نخواهیم داشت: 
 
-['Traceback (most recent call last):']{dir=ltr}
-['File "<stdin>", line 1, in <module>']{dir=ltr}
-['FileNotFoundError: [Errno 2] No such file or directory: 'stuff.txt'']{dir=ltr}
+[`Traceback (most recent call last):`]{dir=ltr}
+[`File "<stdin>", line 1, in <module>`]{dir=ltr}
+[`FileNotFoundError: [Errno 2] No such file or directory: 'stuff.txt'`]{dir=ltr}
 
 ## خواندن فایل
 
 با بازکردن فایل، تنها یک 
-['handle']{dir=ltr} 
+[`handle`]{dir=ltr} 
 در اختیار خواهیم داشت تا بتوانیم با استفاده از آن با فایل موردنظر کار کنیم. 
 بنابریان برای خواندن فایل، می‌بایست با یک دستور حلقه 
 ['for']{dir=ltr} 
 ساده، اقدام به خواندن فایل کنیم:
 
 
-```{python}
+```python
 fhand = open('./ref/mbox.txt')
 count = 0
 for line in fhand:
@@ -60,14 +60,14 @@ print('Line Count:', count)
 استفاده کنیم:
 
 
-```{python}
+```python
 fhand = open('./ref/mbox.txt')
 inp = fhand.read()
 print(len(inp))
 ```
 
 
-```{python}
+```python
 print(inp[:20])
 ```
 
@@ -75,7 +75,7 @@ print(inp[:20])
 در این حالت بهتر است رشته خوانده شده از فایل را در یک متغیر ذخیره کنیم، چراکه 
 با خواندن فایل بعدی به همین روش، محتویات فایل قبلی را از دست خواهیم داد، 
 به همین دلیل ما از متغیر 
-['inp']{dir=ltr} 
+`inp`
 در دستورات فوق استفاده کردیم.
 
 
@@ -85,7 +85,7 @@ print(inp[:20])
 در فایلی که از قبل آن را باز کرده و خوانده‌ایم، جستجو کنیم:
 
 
-```{python}
+```python
 fhand = open('./ref/mbox.txt')
 count = 0
 for line in fhand:
@@ -95,12 +95,12 @@ for line in fhand:
 ```
 
 در این مثال، ما به دنبال کلمه 
-[''From'']{dir=ltr} 
+[`'From'`]{dir=ltr} 
 هستیم.
 
 
 ما با استفاده از تابع 
-['rstrip()']{dir=ltr} 
+[`rstrip()`]{dir=ltr} 
 فضای خالی را در سمت راست رشته موجود در فایل، حذف کرده‌ایم.
 
 
@@ -113,7 +113,7 @@ for line in fhand:
 موردنظر خود را ابتدا جستجو و سپس باز کند. در اینصورت ما دیگر نام فایل را بصورت 
 مستقیم در کد خود نخواهیم داشت:
 
-```{python}
+```python
 fname = input('Enter the file name: ')
 fhand = open(fname)
 count = 0
@@ -125,9 +125,9 @@ print('There were', count, 'subject lines in', fname)
 
 
 ## استفاده از 
-['try']{dir=ltr} ،
-['except']{dir=ltr} و
-['open']{dir=ltr} 
+[`try`]{dir=ltr}،
+[`except`]{dir=ltr} و
+[`open`]{dir=ltr} 
 
 
 از کد قبل به خاطر داریم که ما به کاربر اجازه دادیم که نام فایل حود را برای 
@@ -136,13 +136,13 @@ print('There were', count, 'subject lines in', fname)
 یک فایل غیرمرتبط برنامه را با خطا مواجه می‌کند، ممکن است فایلی که کاربر آن را 
 انتخاب کرده، عمداً و یا سهواً برای برنامه ما ضرر داشته باشد. بنابراین ما با 
 ایتفاده از  دستورات 
-['try']{dir=ltr} ،
-['except']{dir=ltr} و
-['open']{dir=ltr} 
+[`try`]{dir=ltr} ،
+[`except`]{dir=ltr} و
+[`open`]{dir=ltr} 
 این اتفاق را مدیریت می‌کنیم:
 
 
-```{python}
+```python
 fname = input('Enter the file name: ')
 try:
   fhand = open(fname)
@@ -157,7 +157,7 @@ print('There were', count, 'subject lines in', fname)
 ```
 
 همانطور که مشاهده می‌شود، تابع 
-['exit()']{dir=ltr} 
+[`exit()`]{dir=ltr} 
 درصورت اینکه کاربر چیزی غیر از فایل را درخواست داده باشد، برنامه ما از اجرا 
 خارج می‌شود.
 
@@ -169,7 +169,7 @@ print('There were', count, 'subject lines in', fname)
 لازم، این کار را انجام دهند. اما یک نکته متفاوت اینجا مطرح می‌شود، 
 به این قطعه کد توجه کنید:
 
-```{python}
+```python
 fout = open('output.txt', 'w')
 print(fout)
 ```
@@ -182,18 +182,18 @@ print(fout)
 
 مثلاً فرض کنیم می‌خواهیم متن زیر را در فایل بنویسیم: 
 
-['This here's the wattle']{dir=ltr} 
+[`This here's the wattle`]{dir=ltr} 
 
 کد لازم برای این کار، به شکل زیر خواهد بود:
 
-```{python}
+```python
 line1 = "This here's the wattle,\n"
 fout.write(line1)
 ```
 
 و درنهایت اینکه وقتی کارمان با فایلی تمام شد، می‌بایست حتماً آن را ببندیم:
 
-```{python}
+```python
 fout.close()
 ```
 
