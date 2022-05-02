@@ -5,12 +5,10 @@
 .Ruserdata
 
 ## Large files and directory
-timevis/
 data/
 
 ## Import ant Export files
-img/
-data/
+
 py-r/
 _bookdown_files/
 py-r_files
